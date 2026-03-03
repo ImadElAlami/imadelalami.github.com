@@ -19,6 +19,18 @@ header {
   top: 0;
 }
 
+img,svg,video,canvas,audio,iframe,embed,object {
+    display: block;
+    vertical-align: middle
+}
+
+img,video {
+    max-width: 100%;
+    height: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
 nav a {
   color: white;
   margin-left: 20px;
@@ -59,6 +71,16 @@ nav a:hover {
   text-align: center;
 }
 
+img,svg,video,canvas,audio,iframe,embed,object {
+    display: block;
+    vertical-align: middle
+}
+
+img,video {
+    max-width: 100%;
+    height: auto
+}
+
 .cards {
   display: flex;
   justify-content: center;
@@ -66,11 +88,11 @@ nav a:hover {
   margin-top: 40px;
 }
 
-.card {
+.cardindex {
   background: #1e293b;
   padding: 30px;
   border-radius: 8px;
-  width: 250px;
+  width: 500px;
 }
 
 .portfolio {
@@ -117,4 +139,17 @@ button {
   background: #38bdf8;
   cursor: pointer;
   border-radius: 5px;
+}
+
+/* Mobile: stack cards vertically */
+@media (max-width: 768px) {
+  .cards {
+    flex-direction: column;
+    align-items: center; /* center the cards */
+  }
+
+  .cardindex {
+    width: 100%;
+    max-width: 400px; /* keeps it nice and not too wide */
+  }
 }
