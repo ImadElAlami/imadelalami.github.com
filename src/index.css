@@ -1,0 +1,38 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  
+  --color-brand-blue: #00A5EC;
+  --color-brand-royal: #3BC0FF;
+  --color-brand-light: #74D5FF;
+  --color-brand-dark: #002838;
+  --color-brand-black: #000004;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-white text-brand-black font-sans antialiased transition-colors duration-300;
+  }
+}
+
+@layer utilities {
+  .glass-nav {
+    @apply sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-brand-blue/10 transition-colors duration-300;
+  }
+  .section-padding {
+    @apply py-20 px-6 md:px-12 lg:px-24;
+  }
+  .btn-primary {
+    @apply bg-brand-blue text-white px-8 py-3 rounded-xl font-medium transition-all hover:bg-brand-dark hover:shadow-lg hover:-translate-y-0.5 active:translate-y-0 cursor-pointer;
+  }
+  .btn-secondary {
+    @apply border-2 border-brand-blue text-brand-blue px-8 py-3 rounded-xl font-medium transition-all hover:bg-brand-blue/5 hover:shadow-md hover:-translate-y-0.5 active:translate-y-0 cursor-pointer;
+  }
+  .card-base {
+    @apply bg-white rounded-3xl shadow-sm border border-brand-blue/5 transition-all duration-300;
+  }
+}
