@@ -1,4 +1,13 @@
-import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
+// import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
+import { HashRouter, Routes, Route } from "react-router-dom";
+
+<HashRouter>
+  <Routes>
+    <Route path="/" element={<Home />} />
+    <Route path="/portfolio" element={<Portfolio />} />
+  </Routes>
+</HashRouter>
+
 import { useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { 
