@@ -38,9 +38,9 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
         <Link to="/" className="text-2xl font-bold text-brand-dark flex items-center gap-2">
           <div className="w-10 h-10 bg-brand-blue rounded-lg flex items-center justify-center text-white">
-            AR
+            IE
           </div>
-          <span className="hidden sm:block">Alex Rivera</span>
+          <span className="hidden sm:block">Imad El Alami</span>
         </Link>
 
         {/* Desktop Nav */}
@@ -214,9 +214,9 @@ const Footer = () => (
       <div>
         <div className="text-2xl font-bold mb-6 flex items-center gap-2">
           <div className="w-8 h-8 bg-brand-blue rounded flex items-center justify-center text-white text-base">
-            AR
+            IE
           </div>
-          Alex Rivera
+          Imad El Alami
         </div>
         <p className="text-white/60 max-w-xs">
           Crafting digital experiences with precision and passion. Let's build something amazing together.
@@ -246,7 +246,7 @@ const Footer = () => (
       </div>
     </div>
     <div className="max-w-7xl mx-auto mt-16 pt-8 border-t border-white/10 text-center text-white/40 text-sm">
-      © {new Date().getFullYear()} Alex Rivera. All rights reserved.
+      © {new Date().getFullYear()} Imad El Alami. All rights reserved.
     </div>
   </footer>
 );
@@ -287,7 +287,9 @@ const Home = () => {
               transition={{ delay: 0.4 }}
               className="text-lg text-brand-dark/70 mb-10 max-w-lg leading-relaxed"
             >
-              Hi, I'm Alex. I specialize in creating high-performance, visually stunning web applications that solve real-world problems.
+              Hi, I'm Imad. I specialize in creating high-performance, visually stunning web applications that solve real-world problems. <br />
+              A passionate full-stack developer with a strong interest in web and mobile technologies.
+
             </motion.p>
             <motion.div 
               initial={{ opacity: 0, y: 20 }}
@@ -428,12 +430,12 @@ const Home = () => {
           >
             <img 
               src="https://picsum.photos/seed/portrait/600/600" 
-              alt="Alex Rivera" 
+              alt="Imad El Alami" 
               className="rounded-2xl shadow-2xl w-full max-w-md mx-auto grayscale hover:grayscale-0 transition-all duration-500"
               referrerPolicy="no-referrer"
             />
             <div className="absolute -bottom-6 -right-6 bg-brand-blue p-8 rounded-2xl hidden md:block">
-              <div className="text-4xl font-bold text-white">8+</div>
+              <div className="text-4xl font-bold text-white">2+</div>
               <div className="text-sm uppercase tracking-widest text-white/80">Years Exp.</div>
             </div>
           </motion.div>
@@ -444,13 +446,16 @@ const Home = () => {
           >
             <h2 className="text-4xl font-bold mb-8">About Me</h2>
             <p className="text-brand-dark/80 text-lg mb-6 leading-relaxed">
-              I am a passionate developer with a deep love for clean code and beautiful design. My journey started over 8 years ago, and since then, I've worked with startups and global brands to bring their visions to life.
+              I am a passionate developer with a deep love for clean code and beautiful design. My journey started over 2 years ago, and since then, I've worked with startups and global brands to bring their visions to life.
+            </p>
+            <p className="text-brand-dark/80 text-lg mb-6 leading-relaxed">
+              I specialize in developing both frontend and backend solutions, utilizing modern technologies such as php, laravel, wordpress, js, Django, Json, and PL/SQL. My technical expertise spans across the full development stack, allowing me to build comprehensive and efficient web applications.
             </p>
             <p className="text-brand-dark/80 text-lg mb-10 leading-relaxed">
-              I believe that technology should be invisible, serving the user's needs without friction. My approach combines technical rigor with creative intuition.
+              My practical experience includes creating PHP websites workflows with Xampp (and cPanel), building internal tools, and designing responsive, user-centric applications. I'm passionate about creating seamless user experiences while ensuring robust backend functionality.
             </p>
             <ul className="space-y-4 mb-10">
-              {['Award-winning UI/UX designs', 'Full-stack development expertise', 'Performance optimization specialist'].map((item, i) => (
+              {['Satisfying UI/UX designs', 'Full-stack development expertise', 'Performance optimization specialist'].map((item, i) => (
                 <li key={i} className="flex items-center gap-3">
                   <div className="w-6 h-6 bg-brand-blue rounded-full flex items-center justify-center text-white">
                     <ChevronRight size={14} />
@@ -473,9 +478,9 @@ const Home = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              { name: 'Sarah Johnson', role: 'CEO, TechFlow', quote: 'Alex delivered a product that exceeded our expectations. The attention to detail is unmatched.' },
-              { name: 'Michael Chen', role: 'Product Manager, Innovate', quote: 'Working with Alex was a breeze. He understands both the technical and business requirements perfectly.' },
-              { name: 'Emma Williams', role: 'Founder, CreativeCo', quote: 'The UI/UX design Alex created for our app has significantly improved our user retention rates.' }
+              { name: 'Sarah Johnson', role: 'CEO, TechFlow', quote: 'Imad delivered a product that exceeded our expectations. The attention to detail is unmatched.' },
+              { name: 'Michael Chen', role: 'Product Manager, Innovate', quote: 'Working with Imad was a breeze. He understands both the technical and business requirements perfectly.' },
+              { name: 'Emma Williams', role: 'Founder, CreativeCo', quote: 'The UI/UX design Imad created for our app has significantly improved our user retention rates.' }
             ].map((t, i) => (
               <motion.div 
                 key={i}
@@ -575,14 +580,14 @@ const Portfolio = () => {
             </h2>
             <div className="mb-6 rounded-2xl overflow-hidden">
               <img 
-                src="https://picsum.photos/seed/about-filler/400/250" 
+                src="/media/DSC_0053.JPG" 
                 alt="About Me Filler" 
                 className="w-full h-auto object-cover"
                 referrerPolicy="no-referrer"
               />
             </div>
             <p className="text-brand-dark/70 leading-relaxed mb-6">
-              I am a results-driven Creative Developer with a passion for building high-quality digital products. With a background in both design and engineering, I bridge the gap between aesthetics and functionality.
+              I pursued a degree in Computer Science. My academic journey has equipped me with a strong foundation in both theoretical and practical aspects of computer science.
             </p>
             <button className="btn-primary w-full flex items-center justify-center gap-2">
               <Download size={18} /> Download CV
@@ -596,8 +601,8 @@ const Portfolio = () => {
             </h2>
             <div className="space-y-8">
               {[
-                { degree: 'M.S. in Computer Science', school: 'Stanford University', date: '2014 - 2016' },
-                { degree: 'B.F.A. in Graphic Design', school: 'Rhode Island School of Design', date: '2010 - 2014' }
+                { degree: 'Masters in Computer Science', school: 'Ecole Superieur do Commerce et Management(ESCM)', date: '2021 - 2024' },
+                { degree: 'DEUG in Web Developping', school: 'Institut du Management de Business et Technology (IMBT)', date: '2019 - 2021' }
               ].map((edu, i) => (
                 <motion.div 
                   key={i} 
@@ -628,9 +633,9 @@ const Portfolio = () => {
             </h2>
             <div className="space-y-6">
               {[
-                { name: 'React / Next.js', level: 95 },
-                { name: 'TypeScript', level: 90 },
-                { name: 'Node.js', level: 85 },
+                { name: 'PHP / Laravel', level: 95 },
+                { name: 'SQL', level: 90 },
+                { name: 'Front-End', level: 85 },
                 { name: 'UI/UX Design', level: 92 },
                 { name: 'Tailwind CSS', level: 98 }
               ].map((skill, i) => (
@@ -651,7 +656,7 @@ const Portfolio = () => {
               ))}
             </div>
             <div className="flex flex-wrap gap-2 mt-8">
-              {['Git', 'Docker', 'AWS', 'Figma', 'GraphQL', 'PostgreSQL'].map((tag) => (
+              {['Git', 'Docker', 'cPanel', 'phpMyAdmin', 'MySQL', 'PostgreSQL'].map((tag) => (
                 <span key={tag} className="px-3 py-1 bg-brand-blue/5 text-brand-blue text-xs font-bold rounded-full border border-brand-blue/10">
                   {tag}
                 </span>
