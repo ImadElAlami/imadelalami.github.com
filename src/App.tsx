@@ -1,4 +1,5 @@
-import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
+import { BrowserRouter, HashRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
+const Router = import.meta.env.PROD ? HashRouter : BrowserRouter;
 import { useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { 
