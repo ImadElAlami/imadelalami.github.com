@@ -162,8 +162,9 @@ const ContactSection = () => {
             <h2 className="text-3xl font-bold mb-8">Contact Me</h2>
             <form className="space-y-6" action="https://formspree.io/f/xjgarrvn" method="POST">
               <div>
-                <label className="block text-sm font-bold mb-2 text-brand-dark/70">Name</label>
+                <label className="block text-sm font-bold mb-2 text-brand-dark/70">Name</label> 
                 <input 
+                  required
                   type="text" 
                   name="name"
                   className="w-full px-4 py-3 rounded-xl border border-brand-dark/10 bg-transparent focus:border-brand-blue outline-none transition-all" 
@@ -173,6 +174,7 @@ const ContactSection = () => {
               <div>
                 <label className="block text-sm font-bold mb-2 text-brand-dark/70">Email</label>
                 <input 
+                  required
                   type="email" 
                   name="email"
                   className="w-full px-4 py-3 rounded-xl border border-brand-dark/10 bg-transparent focus:border-brand-blue outline-none transition-all" 
@@ -182,6 +184,7 @@ const ContactSection = () => {
               <div>
                 <label className="block text-sm font-bold mb-2 text-brand-dark/70">Subject</label>
                 <input 
+                  required
                   type="text" 
                   name="subject"
                   className="w-full px-4 py-3 rounded-xl border border-brand-dark/10 bg-transparent focus:border-brand-blue outline-none transition-all" 
@@ -191,6 +194,7 @@ const ContactSection = () => {
               <div>
                 <label className="block text-sm font-bold mb-2 text-brand-dark/70">Message</label>
                 <textarea 
+                  required
                   className="w-full px-4 py-3 rounded-xl border border-brand-dark/10 bg-transparent focus:border-brand-blue outline-none transition-all h-32" 
                   name="message"
                   placeholder="Your message here..."
