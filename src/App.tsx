@@ -115,11 +115,11 @@ const ContactSection = () => {
           {/* Left: Contact Info Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
-              { icon: <Mail className="text-brand-blue" />, label: 'Email', value: 'expertimad@gmail.com' },
-              { icon: <Phone className="text-brand-blue" />, label: 'Phone', value: '+212656918204' },
-              { icon: <MapPin className="text-brand-blue" />, label: 'Location', value: 'Salé-Rabat, Morocco' },
-              { icon: <Linkedin className="text-brand-blue" />, label: 'LinkedIn', value: 'Imad El Alami' },
-              { icon: <Github className="text-brand-blue" />, label: 'GitHub', value: 'ImadElAlami' },
+              { icon: <Mail className="text-brand-blue" />, label: 'Email', value: 'expertimad@gmail.com', link: 'mailto:expertimad@gmail.com' },
+              { icon: <Phone className="text-brand-blue" />, label: 'Phone', value: '+212656918204', link: 'tel:212656918204' },
+              { icon: <MapPin className="text-brand-blue" />, label: 'Location', value: 'Salé-Rabat, Morocco', link: 'https://maps.app.goo.gl/YMRUaPtptDDoAgJA7' },
+              { icon: <Linkedin className="text-brand-blue" />, label: 'LinkedIn', value: 'Imad El Alami', link: 'https://www.linkedin.com/in/imad-el-alami/'},
+              { icon: <Github className="text-brand-blue" />, label: 'GitHub', value: 'ImadElAlami', link: 'https://github.com/ImadElAlami' },
             ].map((item, i) => (
               <motion.div
                 key={i}
@@ -204,6 +204,7 @@ const ContactSection = () => {
           Every project starts with an idea... let's talk about yours!
         </div>
       </div>
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7863.102698445865!2d-6.788229174362466!3d34.0431673191382!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda76b54e5438771%3A0x1ac9eab8bfc47c06!2sHay%20Salam%20Sal%C3%A9!5e0!3m2!1sfr!2sma!4v1773335348609!5m2!1sfr!2sma" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </section>
   );
 };
@@ -599,6 +600,7 @@ const Portfolio = () => {
             className="btn-primary w-full flex items-center justify-center gap-2">
               <Download size={18} /> Download english CV
             </button>
+            <br /><br />
             <button onClick={() => {
               const link = document.createElement("a");
               link.href = "/Imad El Alami CVDesign fr.pdf";
@@ -618,8 +620,8 @@ const Portfolio = () => {
             </h2>
             <div className="space-y-8">
               {[
-                { degree: 'Masters in Computer Science', school: 'Ecole Supérieur du Commerce et Management (ESCM)', date: '2021 - 2024', logo:'src="/escm logo.png' },
-                { degree: 'DEUG in Web Developping', school: 'Institut de Management & Business Technology (IMBT)', date: '2019 - 2021', logo:'src="/imbt logo.png' }
+                { degree: 'Masters in Computer Science', school: 'Ecole Supérieur du Commerce et Management (ESCM)', abr: 'escm logo', date: '2021 - 2024', logo:'/escm logo.png' },
+                { degree: 'DEUG in Web Developping', school: 'Institut de Management & Business Technology (IMBT)', abr: 'imbt logo', date: '2019 - 2021', logo:'/imbt logo.png' }
               ].map((edu, i) => (
                 <motion.div 
                   key={i} 
@@ -634,9 +636,7 @@ const Portfolio = () => {
                     <div className="w-6 h-6 bg-brand-blue/20 rounded group-hover:scale-110 transition-transform">
                     <img 
                       src={edu.logo}
-                      alt={edu.school}
-                      className="w-full h-auto object-cover"
-                      referrerPolicy="no-referrer"
+                      alt={edu.abr}
                     />
                     </div> 
 
@@ -741,10 +741,12 @@ const Portfolio = () => {
                   className="relative pl-10"
                 >
                   <div className="absolute left-0 top-2 w-6 h-6 bg-white border-4 border-brand-blue rounded-full z-10" />
+
                   <div className="flex flex-wrap justify-between items-start mb-2">
                     <h3 className="text-xl font-bold text-brand-dark">{job.title}</h3>
                     <span className="text-brand-blue font-bold text-sm bg-brand-blue/5 px-3 py-1 rounded-lg">{job.date}</span>
                   </div>
+                  
                   <div className="text-brand-dark/70 font-bold text-sm mb-4 uppercase tracking-widest">{job.company}</div>
                   <p className="text-brand-dark/80 leading-relaxed">{job.desc}</p>
                 </motion.div>
