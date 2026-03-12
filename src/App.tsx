@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Routes, Route, Link, useLocation } from 'react-router-dom';
-import { HashRouter} from "react-router-dom";
 import { useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { 
@@ -798,12 +797,6 @@ const Portfolio = () => {
 };
 
 // --- App ---
-<HashRouter>
-  <Routes>
-    <Route path="/" element={<Home />} />
-    <Route path="/portfolio" element={<Portfolio />} />
-  </Routes>
-</HashRouter>
 
 export default function App() {
   return (
