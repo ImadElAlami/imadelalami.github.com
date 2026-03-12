@@ -122,7 +122,7 @@ const ContactSection = () => {
               { icon: <Linkedin className="text-brand-blue" />, label: 'LinkedIn', value: 'Imad El Alami', link: 'https://www.linkedin.com/in/imad-el-alami/'},
               { icon: <Github className="text-brand-blue" />, label: 'GitHub', value: 'ImadElAlami', link: 'https://github.com/ImadElAlami' },
             ].map((item, i) => (
-              <a href={item.link}>
+              <a href={item.link} target="_blank">
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 30 }}
@@ -160,11 +160,12 @@ const ContactSection = () => {
             className="card-base p-10 lg:p-12"
           >
             <h2 className="text-3xl font-bold mb-8">Contact Me</h2>
-            <form className="space-y-6" onSubmit={(e) => e.preventDefault()}>
+            <form className="space-y-6" action="https://formspree.io/f/xjgarrvn" method="POST">
               <div>
                 <label className="block text-sm font-bold mb-2 text-brand-dark/70">Name</label>
                 <input 
                   type="text" 
+                  name="name"
                   className="w-full px-4 py-3 rounded-xl border border-brand-dark/10 bg-transparent focus:border-brand-blue outline-none transition-all" 
                   placeholder="Your name" 
                 />
@@ -173,6 +174,7 @@ const ContactSection = () => {
                 <label className="block text-sm font-bold mb-2 text-brand-dark/70">Email</label>
                 <input 
                   type="email" 
+                  name="email"
                   className="w-full px-4 py-3 rounded-xl border border-brand-dark/10 bg-transparent focus:border-brand-blue outline-none transition-all" 
                   placeholder="your@email.com" 
                 />
@@ -181,6 +183,7 @@ const ContactSection = () => {
                 <label className="block text-sm font-bold mb-2 text-brand-dark/70">Subject</label>
                 <input 
                   type="text" 
+                  name="subject"
                   className="w-full px-4 py-3 rounded-xl border border-brand-dark/10 bg-transparent focus:border-brand-blue outline-none transition-all" 
                   placeholder="What's this about?" 
                 />
@@ -189,8 +192,10 @@ const ContactSection = () => {
                 <label className="block text-sm font-bold mb-2 text-brand-dark/70">Message</label>
                 <textarea 
                   className="w-full px-4 py-3 rounded-xl border border-brand-dark/10 bg-transparent focus:border-brand-blue outline-none transition-all h-32" 
+                  name="message"
                   placeholder="Your message here..."
                 ></textarea>
+                
               </div>
               <motion.button 
                 whileHover={{ scale: 1.02 }}
