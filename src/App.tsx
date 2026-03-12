@@ -122,6 +122,7 @@ const ContactSection = () => {
               { icon: <Linkedin className="text-brand-blue" />, label: 'LinkedIn', value: 'Imad El Alami', link: 'https://www.linkedin.com/in/imad-el-alami/'},
               { icon: <Github className="text-brand-blue" />, label: 'GitHub', value: 'ImadElAlami', link: 'https://github.com/ImadElAlami' },
             ].map((item, i) => (
+              <a href={item.link}>
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 30 }}
@@ -147,7 +148,7 @@ const ContactSection = () => {
                   <div className="text-brand-blue font-bold text-sm mb-1 uppercase tracking-wider">{item.label}</div>
                   <div className="text-brand-dark font-medium break-all">{item.value}</div>
                 </div>
-              </motion.div>
+              </motion.div></a>
             ))}
           </div>
 
