@@ -580,7 +580,7 @@ const Portfolio = () => {
             </h2>
             <div className="mb-6 rounded-2xl overflow-hidden">
               <img 
-                src="/media/DSC_0053.JPG" 
+                src="/DSC_0053.JPG"
                 alt="About Me Filler" 
                 className="w-full h-auto object-cover"
                 referrerPolicy="no-referrer"
@@ -589,8 +589,25 @@ const Portfolio = () => {
             <p className="text-brand-dark/70 leading-relaxed mb-6">
               I pursued a degree in Computer Science. My academic journey has equipped me with a strong foundation in both theoretical and practical aspects of computer science.
             </p>
-            <button className="btn-primary w-full flex items-center justify-center gap-2">
-              <Download size={18} /> Download CV
+            <button  onClick={() => {
+              const link = document.createElement("a");
+              link.href = "/Imad El Alami CVDesign eng.pdf";
+              link.download = "Imad El Alami CVDesign eng.pdf";
+              link.click();
+            }}
+            
+            className="btn-primary w-full flex items-center justify-center gap-2">
+              <Download size={18} /> Download english CV
+            </button>
+            <button onClick={() => {
+              const link = document.createElement("a");
+              link.href = "/Imad El Alami CVDesign fr.pdf";
+              link.download = "Imad El Alami CVDesign fr.pdf";
+              link.click();
+            }}
+            
+            className="btn-primary w-full flex items-center justify-center gap-2">
+              <Download size={18} /> Download french CV
             </button>
           </section>
 
@@ -601,8 +618,8 @@ const Portfolio = () => {
             </h2>
             <div className="space-y-8">
               {[
-                { degree: 'Masters in Computer Science', school: 'Ecole Superieur do Commerce et Management(ESCM)', date: '2021 - 2024' },
-                { degree: 'DEUG in Web Developping', school: 'Institut du Management de Business et Technology (IMBT)', date: '2019 - 2021' }
+                { degree: 'Masters in Computer Science', school: 'Ecole Supérieur du Commerce et Management (ESCM)', date: '2021 - 2024', logo:'src="/escm logo.png' },
+                { degree: 'DEUG in Web Developping', school: 'Institut de Management & Business Technology (IMBT)', date: '2019 - 2021', logo:'src="/imbt logo.png' }
               ].map((edu, i) => (
                 <motion.div 
                   key={i} 
@@ -614,7 +631,15 @@ const Portfolio = () => {
                 >
                   <div className="flex-shrink-0 w-12 h-12 bg-brand-blue/5 rounded-lg border border-brand-blue/10 flex items-center justify-center group-hover:bg-brand-blue/10 transition-colors">
                     {/* Filler square for logo */}
-                    <div className="w-6 h-6 bg-brand-blue/20 rounded group-hover:scale-110 transition-transform" />
+                    <div className="w-6 h-6 bg-brand-blue/20 rounded group-hover:scale-110 transition-transform">
+                    <img 
+                      src={edu.logo}
+                      alt={edu.school}
+                      className="w-full h-auto object-cover"
+                      referrerPolicy="no-referrer"
+                    />
+                    </div> 
+
                   </div>
                   <div>
                     <div className="font-bold text-brand-dark group-hover:text-brand-blue transition-colors">{edu.degree}</div>
@@ -637,7 +662,8 @@ const Portfolio = () => {
                 { name: 'SQL', level: 90 },
                 { name: 'Front-End', level: 85 },
                 { name: 'UI/UX Design', level: 92 },
-                { name: 'Tailwind CSS', level: 98 }
+                { name: 'Tailwind CSS', level: 98 },
+                { name: 'Python', level: 80 },
               ].map((skill, i) => (
                 <div key={i}>
                   <div className="flex justify-between text-sm font-bold mb-2 text-brand-dark/80">
@@ -656,7 +682,7 @@ const Portfolio = () => {
               ))}
             </div>
             <div className="flex flex-wrap gap-2 mt-8">
-              {['Git', 'Docker', 'cPanel', 'phpMyAdmin', 'MySQL', 'PostgreSQL'].map((tag) => (
+              {['Git', 'Docker', 'cPanel', 'phpMyAdmin', 'MySQL', 'PostgreSQL','Power BI'].map((tag) => (
                 <span key={tag} className="px-3 py-1 bg-brand-blue/5 text-brand-blue text-xs font-bold rounded-full border border-brand-blue/10">
                   {tag}
                 </span>
@@ -674,22 +700,35 @@ const Portfolio = () => {
             </h2>
             <div className="space-y-12 relative before:absolute before:left-[11px] before:top-2 before:bottom-2 before:w-0.5 before:bg-brand-blue/10">
               {[
+                
                 {
-                  title: 'Senior Creative Developer',
-                  company: 'DesignStudio Global',
-                  date: '2020 - Present',
-                  desc: 'Leading a team of 5 developers in creating high-end digital experiences for Fortune 500 clients. Implemented a custom design system that reduced development time by 40%.'
+                  title: 'Full Stack Senior Developer (PHP/python) - iClinika',
+                  company: '4DBC',
+                  date: '2024 - now',
+                  desc: 'Leading a team of 15+ developers in creating high-end digital experiences. Developed and maintained scalable web applications from scratch related to online medical care. Optimized database queries. Creating and analysing Databses using UML diagrams'
                 },
                 {
-                  title: 'Full Stack Developer',
-                  company: 'TechStart Inc.',
-                  date: '2017 - 2020',
-                  desc: 'Developed and maintained scalable web applications using React and Node.js. Optimized database queries resulting in a 30% improvement in application performance.'
+                  title: 'Wordpress Developer',
+                  company: '4DBC',
+                  date: '2025 April - November',
+                  desc: 'Back-end snippet scripts, Plugin maintenance, indexing and SEO optimization and Content management for multiple webpsites at the same time.'
                 },
                 {
-                  title: 'Junior Web Designer',
-                  company: 'PixelPerfect Agency',
-                  date: '2016 - 2017',
+                  title: 'Internship - Web developemt',
+                  company: '4DBC',
+                  date: '2023 summer',
+                  desc: 'Contributed to the first concept of iClinika.'
+                },
+                {
+                  title: 'Internship - Web developemt',
+                  company: 'PROWED-MEDIA .S.A.R.L',
+                  date: '2022 summer',
+                  desc: 'Back-end snippet scripts, Plugin maintenance, indexing and SEO optimization and Content management for multiple webpsites at the same time.'
+                },
+                {
+                  title: 'Internship - Junior Web Designer',
+                  company: 'PROWED-MEDIA .S.A.R.L',
+                  date: '2021 summer',
                   desc: 'Collaborated with senior designers to create responsive web layouts and interactive prototypes. Mastered the fundamentals of modern web standards.'
                 }
               ].map((job, i) => (
