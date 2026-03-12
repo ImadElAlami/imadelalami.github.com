@@ -203,7 +203,7 @@ const ContactSection = () => {
         <div className="mt-12 text-center text-brand-dark/40 text-sm">
           Every project starts with an idea... let's talk about yours!
         </div>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7863.102698445865!2d-6.788229174362466!3d34.0431673191382!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda76b54e5438771%3A0x1ac9eab8bfc47c06!2sHay%20Salam%20Sal%C3%A9!5e0!3m2!1sfr!2sma!4v1773335348609!5m2!1sfr!2sma" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        
       </div>
       
     </section>
