@@ -306,9 +306,7 @@ const Home = () => {
               Building Digital <br />
               <span className="text-brand-blue">Masterpieces</span>
             </motion.h1>
-            <button onClick={goToContact}>
-              Contact me
-            </button>
+            
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
@@ -420,8 +418,17 @@ const Home = () => {
                 </div>
               </motion.div>
             ))}
+            <button onClick={goToContact}>
+              Contact me
+            </button>
           </div>
+          <button onClick={goToContact}>
+              Contact me
+            </button>
         </div>
+        <button onClick={goToContact}>
+              Contact me
+            </button>
       </section>
 
       {/* Skills / Services */}
