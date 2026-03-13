@@ -705,9 +705,9 @@ const Home = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-                { title: 'Enterprise Resource Planning (ERP)', desc: 'Easy to manage websites made to have a smooth experience with your Enterprise.', pic: '/ERP.png', example: '/about-erp'},
-                { title: 'Landing Pages', desc: 'High-converting landing pages for marketing campaigns.', pic: '/Landing_page.png', example: '/about-landing'},
-                { title: 'Portfolio Page', desc: 'Professional websites tailored to your identity.', pic: '/Portfolio.png', example: '/about-portfolio'},
+                { title: 'Enterprise Resource Planning (ERP)', desc: 'Easy to manage websites made to have a smooth experience with your Enterprise.', pic: '/ERP.png', example: '/About_Erp'},
+                { title: 'Landing Pages', desc: 'High-converting landing pages for marketing campaigns.', pic: '/Landing_page.png', example: '/About_Landing'},
+                { title: 'Portfolio Page', desc: 'Professional websites tailored to your identity.', pic: '/Portfolio.png', example: '/About_Portfolio'},
               ].map((project, i) => (
                 
             // {[1, 2, 3].map((i) => (
@@ -1168,9 +1168,9 @@ export default function App() {
               <Route path="/" element={<Home />} />
               <Route path="/portfolio" element={<Portfolio />} />
               <Route path="/contact" element={<ContactSection />} />
-              <Route path="/about-erp" element={<About_Erp />} />
-              <Route path="/about-landing" element={<About_Landing />} />
-              <Route path="/about-portfolio" element={<About_Portfolio />} />
+              <Route path="/About_Erp" element={<About_Erp />} />
+              <Route path="/About_Landing" element={<About_Landing />} />
+              <Route path="/About_Portfolio" element={<About_Portfolio />} />
             </Routes>
           </AnimatePresence>
         </main>
