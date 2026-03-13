@@ -62,7 +62,7 @@ const Navbar = () => {
           <motion.a 
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            href="#contact" 
+            href="#/contact" 
             className="btn-primary py-2 text-sm"
           >
             Contact Me
@@ -98,7 +98,7 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
-            <a href="#contact" onClick={() => setIsOpen(false)} className="btn-primary text-center">
+            <a href="#/contact" onClick={() => setIsOpen(false)} className="btn-primary text-center">
               Contact Me
             </a>
           </motion.div>
@@ -240,7 +240,7 @@ const Footer = () => (
         <ul className="space-y-4 text-white/60">
           <li><Link to="/" className="hover:text-brand-light transition-colors">Home</Link></li>
           <li><Link to="/portfolio" className="hover:text-brand-light transition-colors">Portfolio</Link></li>
-          <li><a href="#contact" className="hover:text-brand-light transition-colors">Contact</a></li>
+          <li><a href="#/contact" className="hover:text-brand-light transition-colors">Contact</a></li>
         </ul>
       </div>
       <div>
@@ -313,7 +313,7 @@ const Home = () => {
               <Link to="/portfolio" className="btn-primary flex items-center gap-2">
                 View Portfolio <ChevronRight size={18} />
               </Link>
-              <a href="#contact" className="btn-secondary">Contact Me</a>
+              <a href="#/contact" className="btn-secondary">Contact Me</a>
             </motion.div>
           </div>
           <div className="relative hidden lg:block">
@@ -367,7 +367,14 @@ const Home = () => {
             <div className="w-20 h-1.5 bg-brand-blue mx-auto rounded-full" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[1, 2, 3].map((i) => (
+            {[
+                { title: 'Enterprise Resource Planning (ERP)', desc: 'Easy to manage websites made to have a smooth experience with your Enterprise.', pic: '/ERP.png', example: '/about-erp'},
+                { title: 'Landing Pages', desc: 'High-converting landing pages for marketing campaigns.', pic: '/Landing_page.png', example: '/about-landing'},
+                { title: 'Portfolio Page', desc: 'Professional websites tailored to your identity.', pic: '/Portfolio.png', example: '/about-portfolio'},
+              ].map((project, i) => (
+                
+            // {[1, 2, 3].map((i) => (
+            
               <motion.div 
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
@@ -381,18 +388,18 @@ const Home = () => {
                   <motion.img 
                     whileHover={{ scale: 1.1 }}
                     transition={{ duration: 0.5 }}
-                    src={`https://picsum.photos/seed/project${i}/600/400`} 
-                    alt={`Project ${i}`} 
+                    src={project.pic} 
+                    alt={project.title} 
                     className="w-full h-48 object-cover"
                     referrerPolicy="no-referrer"
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2">Project Title {i}</h3>
+                  <h3 className="text-xl font-bold mb-2">{project.title}</h3>
                   <p className="text-brand-dark/60 text-sm mb-6">
-                    A comprehensive solution for modern businesses looking to scale their digital presence.
+                    {project.desc}
                   </p>
-                  <Link to="/portfolio" className="text-brand-blue font-bold flex items-center gap-2 hover:gap-3 transition-all">
+                  <Link to={project.example} className="text-brand-blue font-bold flex items-center gap-2 hover:gap-3 transition-all">
                     Learn More <ChevronRight size={16} />
                   </Link>
                 </div>
@@ -483,7 +490,7 @@ const Home = () => {
       </section>
 
       {/* Testimonials */}
-      <section className="section-padding bg-brand-dark/5">
+      {/* <section className="section-padding bg-brand-dark/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-brand-dark mb-4">What Clients Say</h2>
@@ -515,7 +522,7 @@ const Home = () => {
             ))}
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Process Section */}
       <section className="section-padding">
@@ -632,8 +639,8 @@ const Portfolio = () => {
             </h2>
             <div className="space-y-8">
               {[
-                { degree: 'Masters in Computer Science', school: 'Ecole Supérieur du Commerce et Management (ESCM)', abr: 'escm logo', date: '2021 - 2024', logo:'/escm logo.png' },
-                { degree: 'DEUG in Web Developping', school: 'Institut de Management & Business Technology (IMBT)', abr: 'imbt logo', date: '2019 - 2021', logo:'/imbt logo.png' }
+                { degree: 'MASTERS in Computer Science', school: 'Ecole Supérieur du Commerce et Management (ESCM)', abr: 'escm logo', date: '2022 - 2024', logo:'/escm logo.png' },
+                { degree: 'MACHELOR in Web Developping', school: 'Institut de Management & Business Technology (IMBT)', abr: 'imbt logo', date: '2019 - 2022', logo:'/imbt logo.png' }
               ].map((edu, i) => (
                 <motion.div 
                   key={i} 
@@ -670,12 +677,12 @@ const Portfolio = () => {
             </h2>
             <div className="space-y-6">
               {[
-                { name: 'PHP / Laravel', level: 95 },
-                { name: 'SQL', level: 90 },
-                { name: 'Front-End', level: 85 },
-                { name: 'UI/UX Design', level: 92 },
-                { name: 'Tailwind CSS', level: 98 },
-                { name: 'Python', level: 80 },
+                { name: 'PHP / Laravel', level: 85 },
+                { name: 'SQL', level: 80 },
+                { name: 'Front-End', level: 75 },
+                { name: 'UI/UX Design', level: 80 },
+                { name: 'Tailwind CSS', level: 80 },
+                { name: 'Python', level: 70 },
               ].map((skill, i) => (
                 <div key={i}>
                   <div className="flex justify-between text-sm font-bold mb-2 text-brand-dark/80">
@@ -716,7 +723,7 @@ const Portfolio = () => {
                 {
                   title: 'Full Stack Senior Developer (PHP/python) - iClinika',
                   company: '4DBC',
-                  date: '2024 - now',
+                  date: '2024 - Now',
                   desc: 'Leading a team of 15+ developers in creating high-end digital experiences. Developed and maintained scalable web applications from scratch related to online medical care. Optimized database queries. Creating and analysing Databses using UML diagrams'
                 },
                 {
@@ -728,19 +735,19 @@ const Portfolio = () => {
                 {
                   title: 'Internship - Web developemt',
                   company: '4DBC',
-                  date: '2023 summer',
+                  date: '2023 Summer',
                   desc: 'Contributed to the first concept of iClinika.'
                 },
                 {
                   title: 'Internship - Web developemt',
                   company: 'PROWED-MEDIA .S.A.R.L',
-                  date: '2022 summer',
+                  date: '2022 Summer',
                   desc: 'Back-end snippet scripts, Plugin maintenance, indexing and SEO optimization and Content management for multiple webpsites at the same time.'
                 },
                 {
                   title: 'Internship - Junior Web Designer',
                   company: 'PROWED-MEDIA .S.A.R.L',
-                  date: '2021 summer',
+                  date: '2021 Summer',
                   desc: 'Collaborated with senior designers to create responsive web layouts and interactive prototypes. Mastered the fundamentals of modern web standards.'
                 }
               ].map((job, i) => (
