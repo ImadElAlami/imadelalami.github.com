@@ -324,9 +324,9 @@ const Home = () => {
               className="flex flex-wrap gap-4"
             >
               <Link to="/portfolio" className="btn-primary flex items-center gap-2">
-                Vaiew Portfolio <ChevronRight size={18} />
+                View Portfolio <ChevronRight size={18} />
               </Link>
-              <Link to="/#contact" className="btn-secondary">Contact Me</Link>
+              <Link to="/#contact" className="btn-secondary">Contact Me test</Link>
             </motion.div>
           </div>
           <div className="relative hidden lg:block">
