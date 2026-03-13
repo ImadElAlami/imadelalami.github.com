@@ -23,6 +23,18 @@ import {
 } from 'lucide-react';
 import { useState } from 'react';
 
+import { useNavigate } from "react-router-dom";
+
+const navigate = useNavigate();
+
+const goToContact = () => {
+  navigate("/");
+  setTimeout(() => {
+    const el = document.getElementById("contact");
+    if (el) el.scrollIntoView({ behavior: "smooth" });
+  }, 100);
+};
+
 // --- Components ---
 
 const Navbar = () => {
@@ -294,6 +306,9 @@ const Home = () => {
               Building Digital <br />
               <span className="text-brand-blue">Masterpieces</span>
             </motion.h1>
+            <button onClick={goToContact}>
+              Contact me
+            </button>
             <motion.p 
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
