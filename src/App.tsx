@@ -62,7 +62,7 @@ const Navbar = () => {
           <motion.a 
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            href="#/contact" 
+            href="/#contact" 
             className="btn-primary py-2 text-sm"
           >
             Contact Me
@@ -98,7 +98,7 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
-            <a href="#/contact" onClick={() => setIsOpen(false)} className="btn-primary text-center">
+            <a href="/#contact" onClick={() => setIsOpen(false)} className="btn-primary text-center">
               Contact Me
             </a>
           </motion.div>
@@ -240,7 +240,7 @@ const Footer = () => (
         <ul className="space-y-4 text-white/60">
           <li><Link to="/" className="hover:text-brand-light transition-colors">Home</Link></li>
           <li><Link to="/portfolio" className="hover:text-brand-light transition-colors">Portfolio</Link></li>
-          <li><a href="#/contact" className="hover:text-brand-light transition-colors">Contact</a></li>
+          <li><a href="/#contact" className="hover:text-brand-light transition-colors">Contact</a></li>
         </ul>
       </div>
       <div>
@@ -313,7 +313,7 @@ const Home = () => {
               <Link to="/portfolio" className="btn-primary flex items-center gap-2">
                 View Portfolio <ChevronRight size={18} />
               </Link>
-              <a href="#/contact" className="btn-secondary">Contact Me</a>
+              <a href="/#contact" className="btn-secondary">Contact Me</a>
             </motion.div>
           </div>
           <div className="relative hidden lg:block">
@@ -821,6 +821,7 @@ export default function App() {
   return (
     <Router>
       <ScrollToTop />
+      <ScrollToHash />
       <div className="min-h-screen flex flex-col transition-colors duration-300">
         <Navbar />
         <main className="flex-grow">
@@ -835,6 +836,20 @@ export default function App() {
       </div>
     </Router>
   );
+}
+export default function ScrollToHash() {
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      const el = document.querySelector(hash);
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth" });
+      }
+    }
+  }, [hash]);
+
+  return null;
 }
 
 // Helper to scroll to top on route change
