@@ -221,6 +221,343 @@ const ContactSection = () => {
   );
 };
 
+const About_Erp = () => {
+  return (
+    <section id="contact" className="section-padding bg-white transition-colors duration-300">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {/* Left: Contact Info Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {[
+              { icon: <Mail className="text-brand-blue" />, label: 'Email', value: 'expertimad@gmail.com', link: 'mailto:expertimad@gmail.com' },
+              { icon: <Phone className="text-brand-blue" />, label: 'Phone', value: '+212656918204', link: 'tel:212656918204' },
+              { icon: <MapPin className="text-brand-blue" />, label: 'Location', value: 'Salé-Rabat, Morocco', link: 'https://maps.app.goo.gl/YMRUaPtptDDoAgJA7' },
+              { icon: <Linkedin className="text-brand-blue" />, label: 'LinkedIn', value: 'Imad El Alami', link: 'https://www.linkedin.com/in/imad-el-alami/'},
+              { icon: <Github className="text-brand-blue" />, label: 'GitHub', value: 'ImadElAlami', link: 'https://github.com/ImadElAlami' },
+            ].map((item, i) => (
+              <a href={item.link} target="_blank">
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ 
+                  duration: 0.5, 
+                  delay: i * 0.1,
+                  type: "spring",
+                  stiffness: 100
+                }}
+                whileHover={{ 
+                  scale: 1.03, 
+                  y: -8,
+                  boxShadow: "0 20px 25px -5px rgb(0 165 236 / 0.1), 0 8px 10px -6px rgb(0 165 236 / 0.1)"
+                }}
+                className="card-base p-8 flex flex-col items-center text-center gap-4 group"
+              >
+                <div className="w-12 h-12 rounded-xl bg-brand-blue/10 flex items-center justify-center group-hover:bg-brand-blue group-hover:text-white transition-colors duration-300">
+                  {item.icon}
+                </div>
+                <div>
+                  <div className="text-brand-blue font-bold text-sm mb-1 uppercase tracking-wider">{item.label}</div>
+                  <div className="text-brand-dark font-medium break-all">{item.value}</div>
+                </div>
+              </motion.div></a>
+            ))}
+          </div>
+
+          {/* Right: Contact Form */}
+          <motion.div 
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="card-base p-10 lg:p-12"
+          >
+            <h2 className="text-3xl font-bold mb-8">Contact Me</h2>
+            <form className="space-y-6" action="https://formspree.io/f/xjgarrvn" method="POST">
+              <div>
+                <label className="block text-sm font-bold mb-2 text-brand-dark/70">Name</label> 
+                <input 
+                  required
+                  type="text" 
+                  name="name"
+                  className="w-full px-4 py-3 rounded-xl border border-brand-dark/10 bg-transparent focus:border-brand-blue outline-none transition-all" 
+                  placeholder="Your name" 
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-bold mb-2 text-brand-dark/70">Email</label>
+                <input 
+                  required
+                  type="email" 
+                  name="email"
+                  className="w-full px-4 py-3 rounded-xl border border-brand-dark/10 bg-transparent focus:border-brand-blue outline-none transition-all" 
+                  placeholder="your@email.com" 
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-bold mb-2 text-brand-dark/70">Subject</label>
+                <input 
+                  required
+                  type="text" 
+                  name="subject"
+                  className="w-full px-4 py-3 rounded-xl border border-brand-dark/10 bg-transparent focus:border-brand-blue outline-none transition-all" 
+                  placeholder="What's this about?" 
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-bold mb-2 text-brand-dark/70">Message</label>
+                <textarea 
+                  required
+                  className="w-full px-4 py-3 rounded-xl border border-brand-dark/10 bg-transparent focus:border-brand-blue outline-none transition-all h-32" 
+                  name="message"
+                  placeholder="Your message here..."
+                ></textarea>
+                
+              </div>
+              <motion.button 
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="btn-primary w-full py-4 text-lg font-bold shadow-brand-blue/20"
+              >
+                Send Message
+              </motion.button>
+            </form>
+          </motion.div>
+        </div>
+        <div className="mt-12 text-center text-brand-dark/40 text-sm">
+          Every project starts with an idea... let's talk about yours!
+        </div>
+        
+      </div>
+      
+    </section>
+  );
+};
+const About_Landing = () => {
+  return (
+    <section id="contact" className="section-padding bg-white transition-colors duration-300">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {/* Left: Contact Info Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {[
+              { icon: <Mail className="text-brand-blue" />, label: 'Email', value: 'expertimad@gmail.com', link: 'mailto:expertimad@gmail.com' },
+              { icon: <Phone className="text-brand-blue" />, label: 'Phone', value: '+212656918204', link: 'tel:212656918204' },
+              { icon: <MapPin className="text-brand-blue" />, label: 'Location', value: 'Salé-Rabat, Morocco', link: 'https://maps.app.goo.gl/YMRUaPtptDDoAgJA7' },
+              { icon: <Linkedin className="text-brand-blue" />, label: 'LinkedIn', value: 'Imad El Alami', link: 'https://www.linkedin.com/in/imad-el-alami/'},
+              { icon: <Github className="text-brand-blue" />, label: 'GitHub', value: 'ImadElAlami', link: 'https://github.com/ImadElAlami' },
+            ].map((item, i) => (
+              <a href={item.link} target="_blank">
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ 
+                  duration: 0.5, 
+                  delay: i * 0.1,
+                  type: "spring",
+                  stiffness: 100
+                }}
+                whileHover={{ 
+                  scale: 1.03, 
+                  y: -8,
+                  boxShadow: "0 20px 25px -5px rgb(0 165 236 / 0.1), 0 8px 10px -6px rgb(0 165 236 / 0.1)"
+                }}
+                className="card-base p-8 flex flex-col items-center text-center gap-4 group"
+              >
+                <div className="w-12 h-12 rounded-xl bg-brand-blue/10 flex items-center justify-center group-hover:bg-brand-blue group-hover:text-white transition-colors duration-300">
+                  {item.icon}
+                </div>
+                <div>
+                  <div className="text-brand-blue font-bold text-sm mb-1 uppercase tracking-wider">{item.label}</div>
+                  <div className="text-brand-dark font-medium break-all">{item.value}</div>
+                </div>
+              </motion.div></a>
+            ))}
+          </div>
+
+          {/* Right: Contact Form */}
+          <motion.div 
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="card-base p-10 lg:p-12"
+          >
+            <h2 className="text-3xl font-bold mb-8">Contact Me</h2>
+            <form className="space-y-6" action="https://formspree.io/f/xjgarrvn" method="POST">
+              <div>
+                <label className="block text-sm font-bold mb-2 text-brand-dark/70">Name</label> 
+                <input 
+                  required
+                  type="text" 
+                  name="name"
+                  className="w-full px-4 py-3 rounded-xl border border-brand-dark/10 bg-transparent focus:border-brand-blue outline-none transition-all" 
+                  placeholder="Your name" 
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-bold mb-2 text-brand-dark/70">Email</label>
+                <input 
+                  required
+                  type="email" 
+                  name="email"
+                  className="w-full px-4 py-3 rounded-xl border border-brand-dark/10 bg-transparent focus:border-brand-blue outline-none transition-all" 
+                  placeholder="your@email.com" 
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-bold mb-2 text-brand-dark/70">Subject</label>
+                <input 
+                  required
+                  type="text" 
+                  name="subject"
+                  className="w-full px-4 py-3 rounded-xl border border-brand-dark/10 bg-transparent focus:border-brand-blue outline-none transition-all" 
+                  placeholder="What's this about?" 
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-bold mb-2 text-brand-dark/70">Message</label>
+                <textarea 
+                  required
+                  className="w-full px-4 py-3 rounded-xl border border-brand-dark/10 bg-transparent focus:border-brand-blue outline-none transition-all h-32" 
+                  name="message"
+                  placeholder="Your message here..."
+                ></textarea>
+                
+              </div>
+              <motion.button 
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="btn-primary w-full py-4 text-lg font-bold shadow-brand-blue/20"
+              >
+                Send Message
+              </motion.button>
+            </form>
+          </motion.div>
+        </div>
+        <div className="mt-12 text-center text-brand-dark/40 text-sm">
+          Every project starts with an idea... let's talk about yours!
+        </div>
+        
+      </div>
+      
+    </section>
+  );
+};
+const About_Portfolio = () => {
+  return (
+    <section id="contact" className="section-padding bg-white transition-colors duration-300">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          {/* Left: Contact Info Cards */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {[
+              { icon: <Mail className="text-brand-blue" />, label: 'Email', value: 'expertimad@gmail.com', link: 'mailto:expertimad@gmail.com' },
+              { icon: <Phone className="text-brand-blue" />, label: 'Phone', value: '+212656918204', link: 'tel:212656918204' },
+              { icon: <MapPin className="text-brand-blue" />, label: 'Location', value: 'Salé-Rabat, Morocco', link: 'https://maps.app.goo.gl/YMRUaPtptDDoAgJA7' },
+              { icon: <Linkedin className="text-brand-blue" />, label: 'LinkedIn', value: 'Imad El Alami', link: 'https://www.linkedin.com/in/imad-el-alami/'},
+              { icon: <Github className="text-brand-blue" />, label: 'GitHub', value: 'ImadElAlami', link: 'https://github.com/ImadElAlami' },
+            ].map((item, i) => (
+              <a href={item.link} target="_blank">
+              <motion.div
+                key={i}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ 
+                  duration: 0.5, 
+                  delay: i * 0.1,
+                  type: "spring",
+                  stiffness: 100
+                }}
+                whileHover={{ 
+                  scale: 1.03, 
+                  y: -8,
+                  boxShadow: "0 20px 25px -5px rgb(0 165 236 / 0.1), 0 8px 10px -6px rgb(0 165 236 / 0.1)"
+                }}
+                className="card-base p-8 flex flex-col items-center text-center gap-4 group"
+              >
+                <div className="w-12 h-12 rounded-xl bg-brand-blue/10 flex items-center justify-center group-hover:bg-brand-blue group-hover:text-white transition-colors duration-300">
+                  {item.icon}
+                </div>
+                <div>
+                  <div className="text-brand-blue font-bold text-sm mb-1 uppercase tracking-wider">{item.label}</div>
+                  <div className="text-brand-dark font-medium break-all">{item.value}</div>
+                </div>
+              </motion.div></a>
+            ))}
+          </div>
+
+          {/* Right: Contact Form */}
+          <motion.div 
+            initial={{ opacity: 0, x: 20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            className="card-base p-10 lg:p-12"
+          >
+            <h2 className="text-3xl font-bold mb-8">Contact Me</h2>
+            <form className="space-y-6" action="https://formspree.io/f/xjgarrvn" method="POST">
+              <div>
+                <label className="block text-sm font-bold mb-2 text-brand-dark/70">Name</label> 
+                <input 
+                  required
+                  type="text" 
+                  name="name"
+                  className="w-full px-4 py-3 rounded-xl border border-brand-dark/10 bg-transparent focus:border-brand-blue outline-none transition-all" 
+                  placeholder="Your name" 
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-bold mb-2 text-brand-dark/70">Email</label>
+                <input 
+                  required
+                  type="email" 
+                  name="email"
+                  className="w-full px-4 py-3 rounded-xl border border-brand-dark/10 bg-transparent focus:border-brand-blue outline-none transition-all" 
+                  placeholder="your@email.com" 
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-bold mb-2 text-brand-dark/70">Subject</label>
+                <input 
+                  required
+                  type="text" 
+                  name="subject"
+                  className="w-full px-4 py-3 rounded-xl border border-brand-dark/10 bg-transparent focus:border-brand-blue outline-none transition-all" 
+                  placeholder="What's this about?" 
+                />
+              </div>
+              <div>
+                <label className="block text-sm font-bold mb-2 text-brand-dark/70">Message</label>
+                <textarea 
+                  required
+                  className="w-full px-4 py-3 rounded-xl border border-brand-dark/10 bg-transparent focus:border-brand-blue outline-none transition-all h-32" 
+                  name="message"
+                  placeholder="Your message here..."
+                ></textarea>
+                
+              </div>
+              <motion.button 
+                whileHover={{ scale: 1.02 }}
+                whileTap={{ scale: 0.98 }}
+                className="btn-primary w-full py-4 text-lg font-bold shadow-brand-blue/20"
+              >
+                Send Message
+              </motion.button>
+            </form>
+          </motion.div>
+        </div>
+        <div className="mt-12 text-center text-brand-dark/40 text-sm">
+          Every project starts with an idea... let's talk about yours!
+        </div>
+        
+      </div>
+      
+    </section>
+  );
+};
+
 const Footer = () => (
   <footer className="bg-brand-dark text-white py-16 px-6">
     <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
@@ -678,11 +1015,13 @@ const Portfolio = () => {
             <div className="space-y-6">
               {[
                 { name: 'PHP / Laravel', level: 85 },
-                { name: 'SQL', level: 80 },
+                { name: 'SQL', level: 85 },
                 { name: 'Front-End', level: 75 },
                 { name: 'UI/UX Design', level: 80 },
+                { name: 'JavaScript', level: 70 },
                 { name: 'Tailwind CSS', level: 80 },
                 { name: 'Python', level: 70 },
+                { name: 'Wordpress', level: 75 },
               ].map((skill, i) => (
                 <div key={i}>
                   <div className="flex justify-between text-sm font-bold mb-2 text-brand-dark/80">
@@ -829,6 +1168,9 @@ export default function App() {
               <Route path="/" element={<Home />} />
               <Route path="/portfolio" element={<Portfolio />} />
               <Route path="/contact" element={<ContactSection />} />
+              <Route path="/about-erp" element={<About_Erp />} />
+              <Route path="/about-landing" element={<About_Landing />} />
+              <Route path="/about-portfolio" element={<About_Portfolio />} />
             </Routes>
           </AnimatePresence>
         </main>
