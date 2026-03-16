@@ -275,7 +275,9 @@ const About_Erp = () => {
             <Link to="/portfolio" className="btn-primary inline-block">View Full Resume</Link>
           </motion.div>
         </div>
+        <ContactSection />
       </section>
+      
   );
 };
 const About_Landing = () => {
@@ -327,6 +329,7 @@ const About_Landing = () => {
             <Link to="/portfolio" className="btn-primary inline-block">View Full Resume</Link>
           </motion.div>
         </div>
+        <ContactSection />
       </section>
   );
 };
@@ -379,6 +382,7 @@ const About_Portfolio = () => {
             <Link to="/portfolio" className="btn-primary inline-block">View Full Resume</Link>
           </motion.div>
         </div>
+        <ContactSection />
       </section>
   );
 };
@@ -570,6 +574,78 @@ const Home = () => {
                 </div>
               </motion.div>
             ))}
+          </div>
+        </div>
+        <div className="max-w-7xl mx-auto">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-brand-dark mb-4">General Information</h2>
+            <div className="w-20 h-1.5 bg-brand-blue mx-auto rounded-full" />
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            
+              <motion.div 
+                // key={1}
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                // transition={{ delay: i * 0.1 }}
+                whileHover={{ y: -10 }}
+                className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-brand-blue/5"
+              >
+                <div className="overflow-hidden">
+                  <motion.img 
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ duration: 0.5 }}
+                    src={"src"} 
+                    alt={"alt"} 
+                    className="w-full h-48 object-cover"
+                    referrerPolicy="no-referrer"
+                  />
+                </div>
+                <div className="p-6">
+                  <h3 className="text-xl font-bold mb-2">About Hosting</h3>
+                  <p className="text-brand-dark/60 text-sm mb-6">
+                    big host
+                  </p>
+                  <p className="text-brand-dark/60 text-sm mb-6">
+                    X pages
+                  </p>
+                  
+                </div>
+              </motion.div>
+            
+            <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl font-bold mb-8">About Hosting</h2>
+            <p className="text-brand-dark/80 text-lg mb-6 leading-relaxed">
+              big host
+            </p>
+            <p className="text-brand-dark/80 text-lg mb-6 leading-relaxed">
+              X pages
+            </p>
+            <p className="text-brand-dark/80 text-lg mb-10 leading-relaxed">
+              extra
+            </p>
+            <ul className="space-y-4 mb-10">
+              {['thing 1', 'thing 2', 'thing 3'].map((item, i) => (
+                <li key={i} className="flex items-center gap-3">
+                  <div className="w-6 h-6 bg-brand-blue rounded-full flex items-center justify-center text-white">
+                    <ChevronRight size={14} />
+                  </div>
+                  <span className="text-brand-dark/90">{item}</span>
+                </li>
+              ))}
+            </ul>
+            <Link to="/About_Erp" className="btn-primary inline-block">View Full Resume</Link>
+          </motion.div>
+          <Link to="/About_Landing" className="btn-primary inline-block">View Full Resume</Link>
+          </motion.div>
+          <Link to="/About_Portfolio" className="btn-primary inline-block">View Full Resume</Link>
+          </motion.div>
           </div>
         </div>
       </section>
