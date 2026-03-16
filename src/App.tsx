@@ -138,12 +138,11 @@ const ContactSection = () => {
                   type: "spring",
                   stiffness: 100
                 }}
-                whileHover={{ y: -5, borderColor: '#00A5EC' }}
-                // whileHover={{ 
-                //   scale: 1.03, 
-                //   y: -8,
-                //   boxShadow: "0 20px 25px -5px rgb(0 165 236 / 0.1), 0 8px 10px -6px rgb(0 165 236 / 0.1)"
-                // }}
+                whileHover={{ 
+                  scale: 1.03, 
+                  y: -8,
+                  boxShadow: "0 20px 25px -5px rgb(0 165 236 / 0.1), 0 8px 10px -6px rgb(0 165 236 / 0.1)"
+                }}
                 className="card-base p-8 flex flex-col items-center text-center gap-4 group"
               >
                 <div className="w-12 h-12 rounded-xl bg-brand-blue/10 flex items-center justify-center group-hover:bg-brand-blue group-hover:text-white transition-colors duration-300">
