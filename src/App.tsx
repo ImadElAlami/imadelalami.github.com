@@ -642,7 +642,7 @@ const Home = () => {
             <h2 className="text-4xl font-bold text-brand-dark mb-4">General Information</h2>
             <div className="w-20 h-1.5 bg-brand-blue mx-auto rounded-full" />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-12">
+          <div className="grid grid-cols-1 md:grid-cols-1 gap-8">
             
             <motion.div
             initial={{ opacity: 0, x: 50 }}
@@ -670,9 +670,9 @@ const Home = () => {
                 </li>
               ))}
             </ul>
-            <Link to="/About_Erp" className="btn-primary inline-block">View erp</Link>
-            <Link to="/About_Landing" className="btn-primary inline-block">View landing</Link>
-            <Link to="/About_Portfolio" className="btn-primary inline-block">View portfolio</Link>
+            <Link to="/About_Erp" className="btn-primary inline-block gap-8">View erp</Link>
+            <Link to="/About_Landing" className="btn-primary inline-block gap-8">View landing</Link>
+            <Link to="/About_Portfolio" className="btn-primary inline-block gap-8">View portfolio</Link>
           </motion.div>
           </div>
         </div>
