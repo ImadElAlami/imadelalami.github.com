@@ -670,9 +670,9 @@ const Home = () => {
                 </li>
               ))}
             </ul>
-            <Link to="/About_Erp" className="btn-primary inline-block gap-8">View erp</Link>
-            <Link to="/About_Landing" className="btn-primary inline-block gap-8">View landing</Link>
-            <Link to="/About_Portfolio" className="btn-primary inline-block gap-8">View portfolio</Link>
+            <Link to="/About_Erp" className="btn-primary inline-block mr-8">View erp</Link>
+            <Link to="/About_Landing" className="btn-primary inline-block mr-8">View landing</Link>
+            <Link to="/About_Portfolio" className="btn-primary inline-block">View portfolio</Link>
           </motion.div>
           </div>
         </div>
