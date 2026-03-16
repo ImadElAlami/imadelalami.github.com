@@ -643,9 +643,9 @@ const Home = () => {
             <Link to="/About_Erp" className="btn-primary inline-block">View Full Resume</Link>
           </motion.div>
           <Link to="/About_Landing" className="btn-primary inline-block">View Full Resume</Link>
-          </motion.div>
+          
           <Link to="/About_Portfolio" className="btn-primary inline-block">View Full Resume</Link>
-          </motion.div>
+          
           </div>
         </div>
       </section>
