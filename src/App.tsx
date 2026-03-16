@@ -282,7 +282,27 @@ const About_Erp = () => {
 };
 const About_Landing = () => {
   return (
+    
       <section className="section-padding bg-white text-brand-dark overflow-hidden transition-colors duration-300">
+        <header className="bg-brand-blue/5 text-brand-dark py-24 px-6 text-center relative overflow-hidden transition-colors duration-300">
+        <div className="max-w-7xl mx-auto relative z-10">
+          <motion.h1 
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            className="text-5xl md:text-6xl font-bold mb-6"
+          >
+            Portfolio & Resume
+          </motion.h1>
+          <p className="text-brand-dark/60 text-lg max-w-2xl mx-auto">
+            A detailed look at my professional journey, skills, and the projects I've brought to life.
+          </p>
+        </div>
+        <div className="absolute top-0 left-0 w-full h-full opacity-10">
+          <div className="absolute top-10 left-10 w-64 h-64 bg-brand-blue rounded-full blur-3xl" />
+          <div className="absolute bottom-10 right-10 w-64 h-64 bg-brand-royal rounded-full blur-3xl" />
+        </div>
+      </header>
+      
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
@@ -583,38 +603,6 @@ const Home = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             
-            
-              <motion.div 
-                // key={1}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                // transition={{ delay: i * 0.1 }}
-                whileHover={{ y: -10 }}
-                className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-brand-blue/5"
-              >
-                <div className="overflow-hidden">
-                  <motion.img 
-                    whileHover={{ scale: 1.1 }}
-                    transition={{ duration: 0.5 }}
-                    src={"src"} 
-                    alt={"alt"} 
-                    className="w-full h-48 object-cover"
-                    referrerPolicy="no-referrer"
-                  />
-                </div>
-                <div className="p-6">
-                  <h3 className="text-xl font-bold mb-2">About Hosting</h3>
-                  <p className="text-brand-dark/60 text-sm mb-6">
-                    big host
-                  </p>
-                  <p className="text-brand-dark/60 text-sm mb-6">
-                    X pages
-                  </p>
-                  
-                </div>
-              </motion.div>
-            
             <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -640,12 +628,10 @@ const Home = () => {
                 </li>
               ))}
             </ul>
-            <Link to="/About_Erp" className="btn-primary inline-block">View Full Resume</Link>
+            <Link to="/About_Erp" className="btn-primary inline-block">View erp</Link>
+            <Link to="/About_Landing" className="btn-primary inline-block">View landing</Link>
+            <Link to="/About_Portfolio" className="btn-primary inline-block">View portfolio</Link>
           </motion.div>
-          <Link to="/About_Landing" className="btn-primary inline-block">View Full Resume</Link>
-          
-          <Link to="/About_Portfolio" className="btn-primary inline-block">View Full Resume</Link>
-          
           </div>
         </div>
       </section>
