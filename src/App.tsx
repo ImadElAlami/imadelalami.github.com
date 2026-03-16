@@ -229,6 +229,26 @@ const About_Erp = () => {
   return (
     
       <section className="section-padding bg-white text-brand-dark overflow-hidden transition-colors duration-300">
+        <header className="bg-brand-blue/5 text-brand-dark py-24 px-6 text-center relative overflow-hidden transition-colors duration-300">
+        <div className="max-w-7xl mx-auto relative z-10">
+          <motion.h1 
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            className="text-5xl md:text-6xl font-bold mb-6"
+          >
+            About Enterprise Resource Planning (ERP) pages
+          </motion.h1>
+          <p className="text-brand-dark/60 text-lg max-w-2xl mx-auto">
+            Easy to manage websites made to have a smooth experience with your Enterprise.
+          </p>
+        </div>
+        <div className="absolute top-0 left-0 w-full h-full opacity-10">
+          <div className="absolute top-10 left-10 w-64 h-64 bg-brand-blue rounded-full blur-3xl" />
+          <div className="absolute bottom-10 right-10 w-64 h-64 bg-brand-royal rounded-full blur-3xl" />
+        </div>
+      </header>
+<br /><br /><br />
+
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
@@ -237,14 +257,14 @@ const About_Erp = () => {
             className="relative"
           >
             <img 
-              src="https://picsum.photos/seed/portrait/600/600" 
-              alt="Imad El Alami" 
+              src="/ERP.png" 
+              alt="About ERP" 
               className="rounded-2xl shadow-2xl w-full max-w-md mx-auto grayscale hover:grayscale-0 transition-all duration-500"
               referrerPolicy="no-referrer"
             />
             <div className="absolute -bottom-6 -right-6 bg-brand-blue p-8 rounded-2xl hidden md:block">
-              <div className="text-4xl font-bold text-white">2+</div>
-              <div className="text-sm uppercase tracking-widest text-white/80">Years Exp.</div>
+              <div className="text-4xl font-bold text-white">10+</div>
+              <div className="text-sm uppercase tracking-widest text-white/80">Pages.</div>
             </div>
           </motion.div>
           <motion.div
@@ -291,10 +311,10 @@ const About_Landing = () => {
             animate={{ y: 0, opacity: 1 }}
             className="text-5xl md:text-6xl font-bold mb-6"
           >
-            Portfolio & Resume
+            About Landing Page
           </motion.h1>
           <p className="text-brand-dark/60 text-lg max-w-2xl mx-auto">
-            A detailed look at my professional journey, skills, and the projects I've brought to life.
+            High-converting landing pages for marketing campaigns.
           </p>
         </div>
         <div className="absolute top-0 left-0 w-full h-full opacity-10">
@@ -302,7 +322,8 @@ const About_Landing = () => {
           <div className="absolute bottom-10 right-10 w-64 h-64 bg-brand-royal rounded-full blur-3xl" />
         </div>
       </header>
-      
+<br /><br /><br />
+
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
@@ -311,14 +332,14 @@ const About_Landing = () => {
             className="relative"
           >
             <img 
-              src="https://picsum.photos/seed/portrait/600/600" 
-              alt="Imad El Alami" 
+              src="/Landing_page.png" 
+              alt="About Landing" 
               className="rounded-2xl shadow-2xl w-full max-w-md mx-auto grayscale hover:grayscale-0 transition-all duration-500"
               referrerPolicy="no-referrer"
             />
             <div className="absolute -bottom-6 -right-6 bg-brand-blue p-8 rounded-2xl hidden md:block">
-              <div className="text-4xl font-bold text-white">2+</div>
-              <div className="text-sm uppercase tracking-widest text-white/80">Years Exp.</div>
+              <div className="text-4xl font-bold text-white">2-5</div>
+              <div className="text-sm uppercase tracking-widest text-white/80">Pages.</div>
             </div>
           </motion.div>
           <motion.div
@@ -356,6 +377,25 @@ const About_Landing = () => {
 const About_Portfolio = () => {
   return (
       <section className="section-padding bg-white text-brand-dark overflow-hidden transition-colors duration-300">
+        <header className="bg-brand-blue/5 text-brand-dark py-24 px-6 text-center relative overflow-hidden transition-colors duration-300">
+        <div className="max-w-7xl mx-auto relative z-10">
+          <motion.h1 
+            initial={{ y: 20, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            className="text-5xl md:text-6xl font-bold mb-6"
+          >
+            About Portfolio Page
+          </motion.h1>
+          <p className="text-brand-dark/60 text-lg max-w-2xl mx-auto">
+            Professional websites tailored to your identity.
+          </p>
+        </div>
+        <div className="absolute top-0 left-0 w-full h-full opacity-10">
+          <div className="absolute top-10 left-10 w-64 h-64 bg-brand-blue rounded-full blur-3xl" />
+          <div className="absolute bottom-10 right-10 w-64 h-64 bg-brand-royal rounded-full blur-3xl" />
+        </div>
+      </header>
+<br /><br /><br />
         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <motion.div 
             initial={{ opacity: 0, x: -50 }}
@@ -364,14 +404,14 @@ const About_Portfolio = () => {
             className="relative"
           >
             <img 
-              src="https://picsum.photos/seed/portrait/600/600" 
-              alt="Imad El Alami" 
+              src="/Portfolio.png" 
+              alt="About Portfolio" 
               className="rounded-2xl shadow-2xl w-full max-w-md mx-auto grayscale hover:grayscale-0 transition-all duration-500"
               referrerPolicy="no-referrer"
             />
             <div className="absolute -bottom-6 -right-6 bg-brand-blue p-8 rounded-2xl hidden md:block">
-              <div className="text-4xl font-bold text-white">2+</div>
-              <div className="text-sm uppercase tracking-widest text-white/80">Years Exp.</div>
+              <div className="text-4xl font-bold text-white">1-2</div>
+              <div className="text-sm uppercase tracking-widest text-white/80">Pages.</div>
             </div>
           </motion.div>
           <motion.div
@@ -596,12 +636,13 @@ const Home = () => {
             ))}
           </div>
         </div>
+        <br /><br />
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             <h2 className="text-4xl font-bold text-brand-dark mb-4">General Information</h2>
             <div className="w-20 h-1.5 bg-brand-blue mx-auto rounded-full" />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-12">
             
             <motion.div
             initial={{ opacity: 0, x: 50 }}
@@ -610,7 +651,8 @@ const Home = () => {
           >
             <h2 className="text-4xl font-bold mb-8">About Hosting</h2>
             <p className="text-brand-dark/80 text-lg mb-6 leading-relaxed">
-              big host
+              big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host.
+               big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host 
             </p>
             <p className="text-brand-dark/80 text-lg mb-6 leading-relaxed">
               X pages
