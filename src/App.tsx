@@ -129,26 +129,22 @@ const ContactSection = () => {
               <a href={item.link} target={item.isblank}>
               <motion.div
                 key={i}
-                initial={{ opacity: 0, scale: 0.9 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                // initial={{ opacity: 0, y: 30 }}
-                // whileInView={{ opacity: 1, y: 0 }}
-                // viewport={{ once: true, margin: "-50px" }}
-                transition={{ delay: i * 0.1 }}
-                // transition={{ 
-                //   duration: 0.5, 
-                //   delay: i * 0.1,
-                //   type: "spring",
-                //   stiffness: 100
-                // }}
-                whileHover={{ y: -5, borderColor: '#00A5EC' }}
-                // whileHover={{ 
-                //   scale: 1.03, 
-                //   y: -8,
-                //   boxShadow: "0 20px 25px -5px rgb(0 165 236 / 0.1), 0 8px 10px -6px rgb(0 165 236 / 0.1)"
-                // }}
-                className="card-base p-8 flex flex-col items-center text-center gap-4 group"
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: "-50px" }}
+                transition={{ 
+                  duration: 0.5, 
+                  delay: i * 0.1,
+                  type: "spring",
+                  stiffness: 100
+                }}
+                whileHover={{ 
+                  scale: 1.03, 
+                  y: -8,
+                  boxShadow: "0 20px 25px -5px rgb(0 165 236 / 0.1), 0 8px 10px -6px rgb(0 165 236 / 0.1)"
+                }}
+                // className="card-base p-8 flex flex-col items-center text-center gap-4 group"
+                className="p-8 rounded-2xl bg-white border border-brand-blue/10 transition-all group"
               >
                 <div className="w-12 h-12 rounded-xl bg-brand-blue/10 flex items-center justify-center group-hover:bg-brand-blue group-hover:text-white transition-colors duration-300">
                   {item.icon}
