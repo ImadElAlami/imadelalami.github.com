@@ -670,9 +670,17 @@ const Home = () => {
                 </li>
               ))}
             </ul>
-            <Link to="/About_Erp" className="btn-primary inline-block mr-8">View erp</Link>
+            <div class="flex gap-6">
+              <Link to="/About_Erp" className="btn-primary flex-1 text-center">View erp</Link>
+              <Link to="/About_Landing" className="btn-primary flex-1 text-center">View landing</Link>
+              <Link to="/About_Portfolio" className="btn-primary flex-1 text-center">View portfolio</Link>
+            </div>
+
+            {/* <Link to="/About_Erp" className="btn-primary inline-block mr-8">View erp</Link>
             <Link to="/About_Landing" className="btn-primary inline-block mr-8">View landing</Link>
-            <Link to="/About_Portfolio" className="btn-primary inline-block">View portfolio</Link>
+            <Link to="/About_Portfolio" className="btn-primary inline-block">View portfolio</Link> */}
+
+            
           </motion.div>
           </div>
         </div>
