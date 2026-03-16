@@ -120,13 +120,13 @@ const ContactSection = () => {
           {/* Left: Contact Info Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             {[
-              { icon: <Mail className="text-brand-blue" />, label: 'Email', value: 'expertimad@gmail.com', link: 'mailto:expertimad@gmail.com', isblank: '' },
-              { icon: <Phone className="text-brand-blue" />, label: 'Phone', value: '+212656918204', link: 'tel:212656918204', isblank: '' },
-              { icon: <MapPin className="text-brand-blue" />, label: 'Location', value: 'Salé-Rabat, Morocco', link: 'https://maps.app.goo.gl/YMRUaPtptDDoAgJA7', isblank: 'target="_blank"' },
-              { icon: <Linkedin className="text-brand-blue" />, label: 'LinkedIn', value: 'Imad El Alami', link: 'https://www.linkedin.com/in/imad-el-alami/', isblank: 'target="_blank"'},
-              { icon: <Github className="text-brand-blue" />, label: 'GitHub', value: 'ImadElAlami', link: 'https://github.com/ImadElAlami', isblank: 'target="_blank"' },
+              { icon: <Mail className="text-brand-blue" />, label: 'Email', value: 'expertimad@gmail.com', link: 'mailto:expertimad@gmail.com', isblank: '_self' },
+              { icon: <Phone className="text-brand-blue" />, label: 'Phone', value: '+212656918204', link: 'tel:212656918204', isblank: '_self' },
+              { icon: <MapPin className="text-brand-blue" />, label: 'Location', value: 'Salé-Rabat, Morocco', link: 'https://maps.app.goo.gl/YMRUaPtptDDoAgJA7', isblank: '_blank"' },
+              { icon: <Linkedin className="text-brand-blue" />, label: 'LinkedIn', value: 'Imad El Alami', link: 'https://www.linkedin.com/in/imad-el-alami/', isblank: '_blank"'},
+              { icon: <Github className="text-brand-blue" />, label: 'GitHub', value: 'ImadElAlami', link: 'https://github.com/ImadElAlami', isblank: '_blank"' },
             ].map((item, i) => (
-              <a href={item.link} {item.isblank}>
+              <a href={item.link} target={item.isblank && "_blank"}>
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 30 }}
@@ -138,11 +138,12 @@ const ContactSection = () => {
                   type: "spring",
                   stiffness: 100
                 }}
-                whileHover={{ 
-                  scale: 1.03, 
-                  y: -8,
-                  boxShadow: "0 20px 25px -5px rgb(0 165 236 / 0.1), 0 8px 10px -6px rgb(0 165 236 / 0.1)"
-                }}
+                whileHover={{ y: -5, borderColor: '#00A5EC' }}
+                // whileHover={{ 
+                //   scale: 1.03, 
+                //   y: -8,
+                //   boxShadow: "0 20px 25px -5px rgb(0 165 236 / 0.1), 0 8px 10px -6px rgb(0 165 236 / 0.1)"
+                // }}
                 className="card-base p-8 flex flex-col items-center text-center gap-4 group"
               >
                 <div className="w-12 h-12 rounded-xl bg-brand-blue/10 flex items-center justify-center group-hover:bg-brand-blue group-hover:text-white transition-colors duration-300">
