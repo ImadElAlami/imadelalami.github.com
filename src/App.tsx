@@ -126,7 +126,7 @@ const ContactSection = () => {
               { icon: <Linkedin className="text-brand-blue" />, label: 'LinkedIn', value: 'Imad El Alami', link: 'https://www.linkedin.com/in/imad-el-alami/', isblank: '_blank'},
               { icon: <Github className="text-brand-blue" />, label: 'GitHub', value: 'ImadElAlami', link: 'https://github.com/ImadElAlami', isblank: '_blank' },
             ].map((item, i) => (
-              <a href={item.link} target={item.isblank && "_blank"}>
+              <a href={item.link} target={item.isblank}>
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 30 }}
