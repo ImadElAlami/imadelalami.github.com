@@ -143,10 +143,10 @@ const ContactSection = () => {
                   y: -8,
                   boxShadow: "0 20px 25px -5px rgb(0 165 236 / 0.1), 0 8px 10px -6px rgb(0 165 236 / 0.1)"
                 }}
-                // className="card-base p-8 flex flex-col items-center text-center gap-4 group"
-                className="p-8 rounded-2xl bg-white border border-brand-blue/10 transition-all group"
+                className="card-base p-8 flex flex-col items-center text-center gap-4 group"
               >
-                <div className="w-12 h-12 rounded-xl bg-brand-blue/10 flex items-center justify-center group-hover:bg-brand-blue group-hover:text-white transition-colors duration-300">
+                {/* <div className="w-12 h-12 rounded-xl bg-brand-blue/10 flex items-center justify-center group-hover:bg-brand-blue group-hover:text-white transition-colors duration-300"> */}
+                <div className="w-12 h-12 bg-brand-blue/10 rounded-xl flex items-center justify-center text-brand-blue mb-6 group-hover:bg-brand-blue group-hover:text-white transition-colors">
                   {item.icon}
                 </div>
                 <div>
