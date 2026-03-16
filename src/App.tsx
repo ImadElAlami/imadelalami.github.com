@@ -145,8 +145,7 @@ const ContactSection = () => {
                 }}
                 className="card-base p-8 flex flex-col items-center text-center gap-4 group"
               >
-                {/* <div className="w-12 h-12 rounded-xl bg-brand-blue/10 flex items-center justify-center group-hover:bg-brand-blue group-hover:text-white transition-colors duration-300"> */}
-                <div className="w-12 h-12 bg-brand-blue/10 rounded-xl flex items-center justify-center text-brand-blue mb-6 group-hover:bg-brand-blue group-hover:text-white transition-colors">
+                <div className="w-12 h-12 rounded-xl bg-brand-blue/10 flex items-center justify-center group-hover:bg-brand-blue group-hover:text-white transition-colors duration-300">
                   {item.icon}
                 </div>
                 <div>
@@ -273,23 +272,26 @@ const About_Erp = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold mb-8">About Me</h2>
+            <h2 className="text-4xl font-bold mb-8">ERP / Business Systems</h2>
             <p className="text-brand-dark/80 text-lg mb-6 leading-relaxed">
-              I am a passionate developer with a deep love for clean code and beautiful design. My journey started over 2 years ago, and since then, I've worked with startups and global brands to bring their visions to life.
+              ERP or business systems are more advanced projects designed to help companies manage internal processes such as data management, dashboards, client systems, or administrative tools.
             </p>
             <p className="text-brand-dark/80 text-lg mb-6 leading-relaxed">
-              I specialize in developing both frontend and backend solutions, utilizing modern technologies such as php, laravel, wordpress, js, Django, Json, and PL/SQL. My technical expertise spans across the full development stack, allowing me to build comprehensive and efficient web applications.
+              These platforms are typically larger and more complex, with multiple pages and features tailored to the business workflow.
             </p>
             <p className="text-brand-dark/80 text-lg mb-10 leading-relaxed">
-              My practical experience includes creating PHP websites workflows with Xampp (and cPanel), building internal tools, and designing responsive, user-centric applications. I'm passionate about creating seamless user experiences while ensuring robust backend functionality.
+              ERP systems usually include 10+ pages and may involve dashboards, data management interfaces, and custom functionality.
+            </p>
+            <p className="text-brand-dark/80 text-lg mb-10 leading-relaxed">
+              Due to their complexity, ERP projects include up to 6 months of free support after delivery, allowing time to ensure everything runs smoothly and any adjustments can be made if necessary.
             </p>
             <ul className="space-y-4 mb-10">
-              {['Satisfying UI/UX designs', 'Full-stack development expertise', 'Performance optimization specialist'].map((item, i) => (
+              {['Built for internal business management', 'Custom dashboards, administrative tools and data management interfaces', 'Designed for long-term business use'].map((item, i) => (
                 <li key={i} className="flex items-center gap-3">
                   <div className="w-6 h-6 bg-brand-blue rounded-full flex items-center justify-center text-white">
                     <ChevronRight size={14} />
                   </div>
-                  <span className="text-brand-dark/90">{item}</span>
+                  <span className="text-brand-dark/90">Up to 6 months of free support included</span>
                 </li>
               ))}
             </ul>
@@ -348,18 +350,17 @@ const About_Landing = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold mb-8">About Me</h2>
+            <h2 className="text-4xl font-bold mb-8">Landing Pages</h2>
             <p className="text-brand-dark/80 text-lg mb-6 leading-relaxed">
-              I am a passionate developer with a deep love for clean code and beautiful design. My journey started over 2 years ago, and since then, I've worked with startups and global brands to bring their visions to life.
-            </p>
+              Landing pages are designed for marketing campaigns, product launches, or business promotions. Their main goal is to convert visitors into customers or leads.            </p>
             <p className="text-brand-dark/80 text-lg mb-6 leading-relaxed">
-              I specialize in developing both frontend and backend solutions, utilizing modern technologies such as php, laravel, wordpress, js, Django, Json, and PL/SQL. My technical expertise spans across the full development stack, allowing me to build comprehensive and efficient web applications.
-            </p>
+              These pages focus on clear messaging, strong visual design, and structured content that guides the visitor toward a specific action such as contacting you, signing up, or purchasing a service.            </p>
             <p className="text-brand-dark/80 text-lg mb-10 leading-relaxed">
-              My practical experience includes creating PHP websites workflows with Xampp (and cPanel), building internal tools, and designing responsive, user-centric applications. I'm passionate about creating seamless user experiences while ensuring robust backend functionality.
-            </p>
+              Landing page projects usually include 2–5 pages, depending on the needs of the campaign.            </p>
+            <p className="text-brand-dark/80 text-lg mb-10 leading-relaxed">
+              For landing pages, I provide 3 to 4 months of free support after the project is completed.            </p>
             <ul className="space-y-4 mb-10">
-              {['Satisfying UI/UX designs', 'Full-stack development expertise', 'Performance optimization specialist'].map((item, i) => (
+              {['Designed for marketing campaigns and promotions', 'Focused on converting visitors into leads or customers', 'Optimized layout for user engagement'].map((item, i) => (
                 <li key={i} className="flex items-center gap-3">
                   <div className="w-6 h-6 bg-brand-blue rounded-full flex items-center justify-center text-white">
                     <ChevronRight size={14} />
@@ -367,6 +368,12 @@ const About_Landing = () => {
                   <span className="text-brand-dark/90">{item}</span>
                 </li>
               ))}
+              <li className="flex items-center gap-3">
+                  <div className="w-6 h-6 bg-brand-blue rounded-full flex items-center justify-center text-white">
+                    <ChevronRight size={20} />
+                  </div>
+                  <span className="text-brand-dark/90">3–4 months of free support included</span>
+                </li>
             </ul>
             <Link to="/portfolio" className="btn-primary inline-block">View Full Resume</Link>
           </motion.div>
@@ -420,18 +427,21 @@ const About_Portfolio = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
-            <h2 className="text-4xl font-bold mb-8">About Me</h2>
+            <h2 className="text-4xl font-bold mb-8">Portfolio Website</h2>
             <p className="text-brand-dark/80 text-lg mb-6 leading-relaxed">
-              I am a passionate developer with a deep love for clean code and beautiful design. My journey started over 2 years ago, and since then, I've worked with startups and global brands to bring their visions to life.
+              Portfolio websites are ideal for individuals who want to present their work, skills, or services in a professional and clean way.
             </p>
             <p className="text-brand-dark/80 text-lg mb-6 leading-relaxed">
-              I specialize in developing both frontend and backend solutions, utilizing modern technologies such as php, laravel, wordpress, js, Django, Json, and PL/SQL. My technical expertise spans across the full development stack, allowing me to build comprehensive and efficient web applications.
+              These websites are usually simple and focused on presentation, including sections such as projects, personal information, contact details, and sometimes a blog or gallery.
+            </p>
+            <p className="text-brand-dark/80 text-lg mb-6 leading-relaxed">
+              Portfolio projects typically contain 1–2 pages, designed to highlight your work while keeping the experience simple and fast.
             </p>
             <p className="text-brand-dark/80 text-lg mb-10 leading-relaxed">
-              My practical experience includes creating PHP websites workflows with Xampp (and cPanel), building internal tools, and designing responsive, user-centric applications. I'm passionate about creating seamless user experiences while ensuring robust backend functionality.
+              After delivery, portfolio websites include 2 months of free support, which covers small updates, fixes, or adjustments if needed.
             </p>
             <ul className="space-y-4 mb-10">
-              {['Satisfying UI/UX designs', 'Full-stack development expertise', 'Performance optimization specialist'].map((item, i) => (
+              {['Simple and fast user experience', 'Mobile responsive design  ', 'Ideal for personal portfolios and professional profiles', 'Designed to showcase projects, skills, or services'].map((item, i) => (
                 <li key={i} className="flex items-center gap-3">
                   <div className="w-6 h-6 bg-brand-blue rounded-full flex items-center justify-center text-white">
                     <ChevronRight size={14} />
@@ -439,6 +449,12 @@ const About_Portfolio = () => {
                   <span className="text-brand-dark/90">{item}</span>
                 </li>
               ))}
+              <li className="flex items-center gap-3">
+                  <div className="w-6 h-6 bg-brand-blue rounded-full flex items-center justify-center text-white">
+                    <ChevronRight size={20} />
+                  </div>
+                  <span className="text-brand-dark/90">2 months of free support included</span>
+                </li>
             </ul>
             <Link to="/portfolio" className="btn-primary inline-block">View Full Resume</Link>
           </motion.div>
@@ -652,17 +668,22 @@ const Home = () => {
           >
             <h2 className="text-4xl font-bold mb-8">About Hosting</h2>
             <p className="text-brand-dark/80 text-lg mb-6 leading-relaxed">
-              big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host.
-               big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host big host 
+              All websites are delivered fully functional and ready to go live. I assist with the deployment process and make sure everything works correctly before the final delivery.
             </p>
             <p className="text-brand-dark/80 text-lg mb-6 leading-relaxed">
-              X pages
+              To ensure transparency and full ownership, the domain and hosting are registered directly by the client. This means you keep complete control over your website, your files, and your hosting provider.
             </p>
             <p className="text-brand-dark/80 text-lg mb-10 leading-relaxed">
-              extra
+              The domain name requires a yearly renewal, which is handled directly by you through your hosting provider. Hosting plans typically range between $30 and $120 per year, depending on the provider and features.
+            </p>
+            <p className="text-brand-dark/80 text-lg mb-10 leading-relaxed">
+              Payment for development can be made through PayPal or bank transfer (RIB). For larger projects, payment may be divided into two parts: one payment to start the project and the remaining balance after completion.
+            </p>
+            <p className="text-brand-dark/80 text-lg mb-10 leading-relaxed">
+              After delivery, I provide a free support period depending on the type of project. During this time I can assist with minor fixes, small adjustments, and guidance if needed.
             </p>
             <ul className="space-y-4 mb-10">
-              {['thing 1', 'thing 2', 'thing 3'].map((item, i) => (
+              {['You own the domain and hosting account', 'Payment methods: PayPal or Bank Transfer (RIB)', 'Free support included after project delivery (includes minor fixes and small adjustments)' ].map((item, i) => (
                 <li key={i} className="flex items-center gap-3">
                   <div className="w-6 h-6 bg-brand-blue rounded-full flex items-center justify-center text-white">
                     <ChevronRight size={14} />
