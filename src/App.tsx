@@ -32,6 +32,10 @@ const Navbar = () => {
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'Portfolio', path: '/portfolio' },
+    { name: 'ERP', path: '/About_Erp' },
+    { name: 'Landing page', path: '/About_Landing' },
+    { name: 'Examples', path: '/About_Portfolio' },
+
   ];
 
   return (
@@ -223,338 +227,159 @@ const ContactSection = () => {
 
 const About_Erp = () => {
   return (
-    <section id="contact" className="section-padding bg-white transition-colors duration-300">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Left: Contact Info Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {[
-              { icon: <Mail className="text-brand-blue" />, label: 'Email', value: 'expertimad@gmail.com', link: 'mailto:expertimad@gmail.com' },
-              { icon: <Phone className="text-brand-blue" />, label: 'Phone', value: '+212656918204', link: 'tel:212656918204' },
-              { icon: <MapPin className="text-brand-blue" />, label: 'Location', value: 'Salé-Rabat, Morocco', link: 'https://maps.app.goo.gl/YMRUaPtptDDoAgJA7' },
-              { icon: <Linkedin className="text-brand-blue" />, label: 'LinkedIn', value: 'Imad El Alami', link: 'https://www.linkedin.com/in/imad-el-alami/'},
-              { icon: <Github className="text-brand-blue" />, label: 'GitHub', value: 'ImadElAlami', link: 'https://github.com/ImadElAlami' },
-            ].map((item, i) => (
-              <a href={item.link} target="_blank">
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ 
-                  duration: 0.5, 
-                  delay: i * 0.1,
-                  type: "spring",
-                  stiffness: 100
-                }}
-                whileHover={{ 
-                  scale: 1.03, 
-                  y: -8,
-                  boxShadow: "0 20px 25px -5px rgb(0 165 236 / 0.1), 0 8px 10px -6px rgb(0 165 236 / 0.1)"
-                }}
-                className="card-base p-8 flex flex-col items-center text-center gap-4 group"
-              >
-                <div className="w-12 h-12 rounded-xl bg-brand-blue/10 flex items-center justify-center group-hover:bg-brand-blue group-hover:text-white transition-colors duration-300">
-                  {item.icon}
-                </div>
-                <div>
-                  <div className="text-brand-blue font-bold text-sm mb-1 uppercase tracking-wider">{item.label}</div>
-                  <div className="text-brand-dark font-medium break-all">{item.value}</div>
-                </div>
-              </motion.div></a>
-            ))}
-          </div>
-
-          {/* Right: Contact Form */}
+    
+      <section className="section-padding bg-white text-brand-dark overflow-hidden transition-colors duration-300">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <motion.div 
-            initial={{ opacity: 0, x: 20 }}
+            initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="card-base p-10 lg:p-12"
+            className="relative"
           >
-            <h2 className="text-3xl font-bold mb-8">Contact Me</h2>
-            <form className="space-y-6" action="https://formspree.io/f/xjgarrvn" method="POST">
-              <div>
-                <label className="block text-sm font-bold mb-2 text-brand-dark/70">Name</label> 
-                <input 
-                  required
-                  type="text" 
-                  name="name"
-                  className="w-full px-4 py-3 rounded-xl border border-brand-dark/10 bg-transparent focus:border-brand-blue outline-none transition-all" 
-                  placeholder="Your name" 
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-bold mb-2 text-brand-dark/70">Email</label>
-                <input 
-                  required
-                  type="email" 
-                  name="email"
-                  className="w-full px-4 py-3 rounded-xl border border-brand-dark/10 bg-transparent focus:border-brand-blue outline-none transition-all" 
-                  placeholder="your@email.com" 
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-bold mb-2 text-brand-dark/70">Subject</label>
-                <input 
-                  required
-                  type="text" 
-                  name="subject"
-                  className="w-full px-4 py-3 rounded-xl border border-brand-dark/10 bg-transparent focus:border-brand-blue outline-none transition-all" 
-                  placeholder="What's this about?" 
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-bold mb-2 text-brand-dark/70">Message</label>
-                <textarea 
-                  required
-                  className="w-full px-4 py-3 rounded-xl border border-brand-dark/10 bg-transparent focus:border-brand-blue outline-none transition-all h-32" 
-                  name="message"
-                  placeholder="Your message here..."
-                ></textarea>
-                
-              </div>
-              <motion.button 
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="btn-primary w-full py-4 text-lg font-bold shadow-brand-blue/20"
-              >
-                Send Message
-              </motion.button>
-            </form>
+            <img 
+              src="https://picsum.photos/seed/portrait/600/600" 
+              alt="Imad El Alami" 
+              className="rounded-2xl shadow-2xl w-full max-w-md mx-auto grayscale hover:grayscale-0 transition-all duration-500"
+              referrerPolicy="no-referrer"
+            />
+            <div className="absolute -bottom-6 -right-6 bg-brand-blue p-8 rounded-2xl hidden md:block">
+              <div className="text-4xl font-bold text-white">2+</div>
+              <div className="text-sm uppercase tracking-widest text-white/80">Years Exp.</div>
+            </div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl font-bold mb-8">About Me</h2>
+            <p className="text-brand-dark/80 text-lg mb-6 leading-relaxed">
+              I am a passionate developer with a deep love for clean code and beautiful design. My journey started over 2 years ago, and since then, I've worked with startups and global brands to bring their visions to life.
+            </p>
+            <p className="text-brand-dark/80 text-lg mb-6 leading-relaxed">
+              I specialize in developing both frontend and backend solutions, utilizing modern technologies such as php, laravel, wordpress, js, Django, Json, and PL/SQL. My technical expertise spans across the full development stack, allowing me to build comprehensive and efficient web applications.
+            </p>
+            <p className="text-brand-dark/80 text-lg mb-10 leading-relaxed">
+              My practical experience includes creating PHP websites workflows with Xampp (and cPanel), building internal tools, and designing responsive, user-centric applications. I'm passionate about creating seamless user experiences while ensuring robust backend functionality.
+            </p>
+            <ul className="space-y-4 mb-10">
+              {['Satisfying UI/UX designs', 'Full-stack development expertise', 'Performance optimization specialist'].map((item, i) => (
+                <li key={i} className="flex items-center gap-3">
+                  <div className="w-6 h-6 bg-brand-blue rounded-full flex items-center justify-center text-white">
+                    <ChevronRight size={14} />
+                  </div>
+                  <span className="text-brand-dark/90">{item}</span>
+                </li>
+              ))}
+            </ul>
+            <Link to="/portfolio" className="btn-primary inline-block">View Full Resume</Link>
           </motion.div>
         </div>
-        <div className="mt-12 text-center text-brand-dark/40 text-sm">
-          Every project starts with an idea... let's talk about yours!
-        </div>
-        
-      </div>
-      
-    </section>
+      </section>
   );
 };
 const About_Landing = () => {
   return (
-    <section id="contact" className="section-padding bg-white transition-colors duration-300">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Left: Contact Info Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {[
-              { icon: <Mail className="text-brand-blue" />, label: 'Email', value: 'expertimad@gmail.com', link: 'mailto:expertimad@gmail.com' },
-              { icon: <Phone className="text-brand-blue" />, label: 'Phone', value: '+212656918204', link: 'tel:212656918204' },
-              { icon: <MapPin className="text-brand-blue" />, label: 'Location', value: 'Salé-Rabat, Morocco', link: 'https://maps.app.goo.gl/YMRUaPtptDDoAgJA7' },
-              { icon: <Linkedin className="text-brand-blue" />, label: 'LinkedIn', value: 'Imad El Alami', link: 'https://www.linkedin.com/in/imad-el-alami/'},
-              { icon: <Github className="text-brand-blue" />, label: 'GitHub', value: 'ImadElAlami', link: 'https://github.com/ImadElAlami' },
-            ].map((item, i) => (
-              <a href={item.link} target="_blank">
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ 
-                  duration: 0.5, 
-                  delay: i * 0.1,
-                  type: "spring",
-                  stiffness: 100
-                }}
-                whileHover={{ 
-                  scale: 1.03, 
-                  y: -8,
-                  boxShadow: "0 20px 25px -5px rgb(0 165 236 / 0.1), 0 8px 10px -6px rgb(0 165 236 / 0.1)"
-                }}
-                className="card-base p-8 flex flex-col items-center text-center gap-4 group"
-              >
-                <div className="w-12 h-12 rounded-xl bg-brand-blue/10 flex items-center justify-center group-hover:bg-brand-blue group-hover:text-white transition-colors duration-300">
-                  {item.icon}
-                </div>
-                <div>
-                  <div className="text-brand-blue font-bold text-sm mb-1 uppercase tracking-wider">{item.label}</div>
-                  <div className="text-brand-dark font-medium break-all">{item.value}</div>
-                </div>
-              </motion.div></a>
-            ))}
-          </div>
-
-          {/* Right: Contact Form */}
+      <section className="section-padding bg-white text-brand-dark overflow-hidden transition-colors duration-300">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <motion.div 
-            initial={{ opacity: 0, x: 20 }}
+            initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="card-base p-10 lg:p-12"
+            className="relative"
           >
-            <h2 className="text-3xl font-bold mb-8">Contact Me</h2>
-            <form className="space-y-6" action="https://formspree.io/f/xjgarrvn" method="POST">
-              <div>
-                <label className="block text-sm font-bold mb-2 text-brand-dark/70">Name</label> 
-                <input 
-                  required
-                  type="text" 
-                  name="name"
-                  className="w-full px-4 py-3 rounded-xl border border-brand-dark/10 bg-transparent focus:border-brand-blue outline-none transition-all" 
-                  placeholder="Your name" 
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-bold mb-2 text-brand-dark/70">Email</label>
-                <input 
-                  required
-                  type="email" 
-                  name="email"
-                  className="w-full px-4 py-3 rounded-xl border border-brand-dark/10 bg-transparent focus:border-brand-blue outline-none transition-all" 
-                  placeholder="your@email.com" 
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-bold mb-2 text-brand-dark/70">Subject</label>
-                <input 
-                  required
-                  type="text" 
-                  name="subject"
-                  className="w-full px-4 py-3 rounded-xl border border-brand-dark/10 bg-transparent focus:border-brand-blue outline-none transition-all" 
-                  placeholder="What's this about?" 
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-bold mb-2 text-brand-dark/70">Message</label>
-                <textarea 
-                  required
-                  className="w-full px-4 py-3 rounded-xl border border-brand-dark/10 bg-transparent focus:border-brand-blue outline-none transition-all h-32" 
-                  name="message"
-                  placeholder="Your message here..."
-                ></textarea>
-                
-              </div>
-              <motion.button 
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="btn-primary w-full py-4 text-lg font-bold shadow-brand-blue/20"
-              >
-                Send Message
-              </motion.button>
-            </form>
+            <img 
+              src="https://picsum.photos/seed/portrait/600/600" 
+              alt="Imad El Alami" 
+              className="rounded-2xl shadow-2xl w-full max-w-md mx-auto grayscale hover:grayscale-0 transition-all duration-500"
+              referrerPolicy="no-referrer"
+            />
+            <div className="absolute -bottom-6 -right-6 bg-brand-blue p-8 rounded-2xl hidden md:block">
+              <div className="text-4xl font-bold text-white">2+</div>
+              <div className="text-sm uppercase tracking-widest text-white/80">Years Exp.</div>
+            </div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl font-bold mb-8">About Me</h2>
+            <p className="text-brand-dark/80 text-lg mb-6 leading-relaxed">
+              I am a passionate developer with a deep love for clean code and beautiful design. My journey started over 2 years ago, and since then, I've worked with startups and global brands to bring their visions to life.
+            </p>
+            <p className="text-brand-dark/80 text-lg mb-6 leading-relaxed">
+              I specialize in developing both frontend and backend solutions, utilizing modern technologies such as php, laravel, wordpress, js, Django, Json, and PL/SQL. My technical expertise spans across the full development stack, allowing me to build comprehensive and efficient web applications.
+            </p>
+            <p className="text-brand-dark/80 text-lg mb-10 leading-relaxed">
+              My practical experience includes creating PHP websites workflows with Xampp (and cPanel), building internal tools, and designing responsive, user-centric applications. I'm passionate about creating seamless user experiences while ensuring robust backend functionality.
+            </p>
+            <ul className="space-y-4 mb-10">
+              {['Satisfying UI/UX designs', 'Full-stack development expertise', 'Performance optimization specialist'].map((item, i) => (
+                <li key={i} className="flex items-center gap-3">
+                  <div className="w-6 h-6 bg-brand-blue rounded-full flex items-center justify-center text-white">
+                    <ChevronRight size={14} />
+                  </div>
+                  <span className="text-brand-dark/90">{item}</span>
+                </li>
+              ))}
+            </ul>
+            <Link to="/portfolio" className="btn-primary inline-block">View Full Resume</Link>
           </motion.div>
         </div>
-        <div className="mt-12 text-center text-brand-dark/40 text-sm">
-          Every project starts with an idea... let's talk about yours!
-        </div>
-        
-      </div>
-      
-    </section>
+      </section>
   );
 };
 const About_Portfolio = () => {
   return (
-    <section id="contact" className="section-padding bg-white transition-colors duration-300">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-          {/* Left: Contact Info Cards */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {[
-              { icon: <Mail className="text-brand-blue" />, label: 'Email', value: 'expertimad@gmail.com', link: 'mailto:expertimad@gmail.com' },
-              { icon: <Phone className="text-brand-blue" />, label: 'Phone', value: '+212656918204', link: 'tel:212656918204' },
-              { icon: <MapPin className="text-brand-blue" />, label: 'Location', value: 'Salé-Rabat, Morocco', link: 'https://maps.app.goo.gl/YMRUaPtptDDoAgJA7' },
-              { icon: <Linkedin className="text-brand-blue" />, label: 'LinkedIn', value: 'Imad El Alami', link: 'https://www.linkedin.com/in/imad-el-alami/'},
-              { icon: <Github className="text-brand-blue" />, label: 'GitHub', value: 'ImadElAlami', link: 'https://github.com/ImadElAlami' },
-            ].map((item, i) => (
-              <a href={item.link} target="_blank">
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ 
-                  duration: 0.5, 
-                  delay: i * 0.1,
-                  type: "spring",
-                  stiffness: 100
-                }}
-                whileHover={{ 
-                  scale: 1.03, 
-                  y: -8,
-                  boxShadow: "0 20px 25px -5px rgb(0 165 236 / 0.1), 0 8px 10px -6px rgb(0 165 236 / 0.1)"
-                }}
-                className="card-base p-8 flex flex-col items-center text-center gap-4 group"
-              >
-                <div className="w-12 h-12 rounded-xl bg-brand-blue/10 flex items-center justify-center group-hover:bg-brand-blue group-hover:text-white transition-colors duration-300">
-                  {item.icon}
-                </div>
-                <div>
-                  <div className="text-brand-blue font-bold text-sm mb-1 uppercase tracking-wider">{item.label}</div>
-                  <div className="text-brand-dark font-medium break-all">{item.value}</div>
-                </div>
-              </motion.div></a>
-            ))}
-          </div>
-
-          {/* Right: Contact Form */}
+      <section className="section-padding bg-white text-brand-dark overflow-hidden transition-colors duration-300">
+        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           <motion.div 
-            initial={{ opacity: 0, x: 20 }}
+            initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
-            className="card-base p-10 lg:p-12"
+            className="relative"
           >
-            <h2 className="text-3xl font-bold mb-8">Contact Me</h2>
-            <form className="space-y-6" action="https://formspree.io/f/xjgarrvn" method="POST">
-              <div>
-                <label className="block text-sm font-bold mb-2 text-brand-dark/70">Name</label> 
-                <input 
-                  required
-                  type="text" 
-                  name="name"
-                  className="w-full px-4 py-3 rounded-xl border border-brand-dark/10 bg-transparent focus:border-brand-blue outline-none transition-all" 
-                  placeholder="Your name" 
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-bold mb-2 text-brand-dark/70">Email</label>
-                <input 
-                  required
-                  type="email" 
-                  name="email"
-                  className="w-full px-4 py-3 rounded-xl border border-brand-dark/10 bg-transparent focus:border-brand-blue outline-none transition-all" 
-                  placeholder="your@email.com" 
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-bold mb-2 text-brand-dark/70">Subject</label>
-                <input 
-                  required
-                  type="text" 
-                  name="subject"
-                  className="w-full px-4 py-3 rounded-xl border border-brand-dark/10 bg-transparent focus:border-brand-blue outline-none transition-all" 
-                  placeholder="What's this about?" 
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-bold mb-2 text-brand-dark/70">Message</label>
-                <textarea 
-                  required
-                  className="w-full px-4 py-3 rounded-xl border border-brand-dark/10 bg-transparent focus:border-brand-blue outline-none transition-all h-32" 
-                  name="message"
-                  placeholder="Your message here..."
-                ></textarea>
-                
-              </div>
-              <motion.button 
-                whileHover={{ scale: 1.02 }}
-                whileTap={{ scale: 0.98 }}
-                className="btn-primary w-full py-4 text-lg font-bold shadow-brand-blue/20"
-              >
-                Send Message
-              </motion.button>
-            </form>
+            <img 
+              src="https://picsum.photos/seed/portrait/600/600" 
+              alt="Imad El Alami" 
+              className="rounded-2xl shadow-2xl w-full max-w-md mx-auto grayscale hover:grayscale-0 transition-all duration-500"
+              referrerPolicy="no-referrer"
+            />
+            <div className="absolute -bottom-6 -right-6 bg-brand-blue p-8 rounded-2xl hidden md:block">
+              <div className="text-4xl font-bold text-white">2+</div>
+              <div className="text-sm uppercase tracking-widest text-white/80">Years Exp.</div>
+            </div>
+          </motion.div>
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+          >
+            <h2 className="text-4xl font-bold mb-8">About Me</h2>
+            <p className="text-brand-dark/80 text-lg mb-6 leading-relaxed">
+              I am a passionate developer with a deep love for clean code and beautiful design. My journey started over 2 years ago, and since then, I've worked with startups and global brands to bring their visions to life.
+            </p>
+            <p className="text-brand-dark/80 text-lg mb-6 leading-relaxed">
+              I specialize in developing both frontend and backend solutions, utilizing modern technologies such as php, laravel, wordpress, js, Django, Json, and PL/SQL. My technical expertise spans across the full development stack, allowing me to build comprehensive and efficient web applications.
+            </p>
+            <p className="text-brand-dark/80 text-lg mb-10 leading-relaxed">
+              My practical experience includes creating PHP websites workflows with Xampp (and cPanel), building internal tools, and designing responsive, user-centric applications. I'm passionate about creating seamless user experiences while ensuring robust backend functionality.
+            </p>
+            <ul className="space-y-4 mb-10">
+              {['Satisfying UI/UX designs', 'Full-stack development expertise', 'Performance optimization specialist'].map((item, i) => (
+                <li key={i} className="flex items-center gap-3">
+                  <div className="w-6 h-6 bg-brand-blue rounded-full flex items-center justify-center text-white">
+                    <ChevronRight size={14} />
+                  </div>
+                  <span className="text-brand-dark/90">{item}</span>
+                </li>
+              ))}
+            </ul>
+            <Link to="/portfolio" className="btn-primary inline-block">View Full Resume</Link>
           </motion.div>
         </div>
-        <div className="mt-12 text-center text-brand-dark/40 text-sm">
-          Every project starts with an idea... let's talk about yours!
-        </div>
-        
-      </div>
-      
-    </section>
+      </section>
   );
 };
 
@@ -705,9 +530,9 @@ const Home = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-                { title: 'Enterprise Resource Planning (ERP)', desc: 'Easy to manage websites made to have a smooth experience with your Enterprise.', pic: '/ERP.png', example: '/About_Erp'},
-                { title: 'Landing Pages', desc: 'High-converting landing pages for marketing campaigns.', pic: '/Landing_page.png', example: '/About_Landing'},
-                { title: 'Portfolio Page', desc: 'Professional websites tailored to your identity.', pic: '/Portfolio.png', example: '/About_Portfolio'},
+                { title: 'Enterprise Resource Planning (ERP)', desc: 'Easy to manage websites made to have a smooth experience with your Enterprise.', desc2:'10+ pages', pic: '/ERP.png', example: '/About_Erp'},
+                { title: 'Landing Pages', desc: 'High-converting landing pages for marketing campaigns.', desc2:'2-5 pages', pic: '/Landing_page.png', example: '/About_Landing'},
+                { title: 'Portfolio Page', desc: 'Professional websites tailored to your identity.', desc2:'1-2 pages',pic: '/Portfolio.png', example: '/About_Portfolio'},
               ].map((project, i) => (
                 
             // {[1, 2, 3].map((i) => (
@@ -735,6 +560,9 @@ const Home = () => {
                   <h3 className="text-xl font-bold mb-2">{project.title}</h3>
                   <p className="text-brand-dark/60 text-sm mb-6">
                     {project.desc}
+                  </p>
+                  <p className="text-brand-dark/60 text-sm mb-6">
+                    {project.desc2}
                   </p>
                   <Link to={project.example} className="text-brand-blue font-bold flex items-center gap-2 hover:gap-3 transition-all">
                     Learn More <ChevronRight size={16} />
