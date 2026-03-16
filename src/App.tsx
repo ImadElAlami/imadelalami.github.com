@@ -129,15 +129,19 @@ const ContactSection = () => {
               <a href={item.link} target={item.isblank}>
               <motion.div
                 key={i}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-50px" }}
-                transition={{ 
-                  duration: 0.5, 
-                  delay: i * 0.1,
-                  type: "spring",
-                  stiffness: 100
-                }}
+                initial={{ opacity: 0, scale: 0.9 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                // initial={{ opacity: 0, y: 30 }}
+                // whileInView={{ opacity: 1, y: 0 }}
+                // viewport={{ once: true, margin: "-50px" }}
+                transition={{ delay: i * 0.1 }}
+                // transition={{ 
+                //   duration: 0.5, 
+                //   delay: i * 0.1,
+                //   type: "spring",
+                //   stiffness: 100
+                // }}
                 whileHover={{ y: -5, borderColor: '#00A5EC' }}
                 // whileHover={{ 
                 //   scale: 1.03, 
