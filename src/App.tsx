@@ -31,10 +31,10 @@ const Navbar = () => {
 
   const navLinks = [
     { name: 'Home', path: '/' },
-    { name: 'Portfolio', path: '/portfolio' },
+    { name: 'About Me', path: '/portfolio' },
     { name: 'ERP', path: '/About_Erp' },
     { name: 'Landing page', path: '/About_Landing' },
-    { name: 'Examples', path: '/About_Portfolio' },
+    { name: 'Portfolio Services', path: '/About_Portfolio' },
 
   ];
 
@@ -291,9 +291,16 @@ const About_Erp = () => {
                   <div className="w-6 h-6 bg-brand-blue rounded-full flex items-center justify-center text-white">
                     <ChevronRight size={14} />
                   </div>
-                  <span className="text-brand-dark/90">Up to 6 months of free support included</span>
+                  <span className="text-brand-dark/90">{item}</span>
                 </li>
               ))}
+              <li className="flex items-center gap-3">
+                  <div className="w-6 h-6 bg-brand-blue rounded-full flex items-center justify-center text-white">
+                    <ChevronRight size={20} />
+                  </div>
+                  <span className="text-brand-dark/90">2 months of free support included</span>
+                </li>
+              
             </ul>
             <Link to="/portfolio" className="btn-primary inline-block">View Full Resume</Link>
           </motion.div>
@@ -606,7 +613,7 @@ const Home = () => {
       <section className="section-padding bg-brand-dark/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
-            <h2 className="text-4xl font-bold text-brand-dark mb-4">Featured Work</h2>
+            <h2 className="text-4xl font-bold text-brand-dark mb-4">Services & Featured Work</h2>
             <div className="w-20 h-1.5 bg-brand-blue mx-auto rounded-full" />
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
