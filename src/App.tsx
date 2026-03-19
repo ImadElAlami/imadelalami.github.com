@@ -681,7 +681,7 @@ const Home = () => {
               To ensure transparency and full ownership, the domain and hosting are registered directly by the client. This means you keep complete control over your website, your files, and your hosting provider.
             </p>
             <p className="text-brand-dark/80 text-lg mb-10 leading-relaxed">
-              The domain name requires a yearly renewal, which is handled directly by you through your hosting provider. Hosting plans typically range between $30 and $120 per year, depending on the provider and features.
+              The domain name requires a yearly renewal, which is handled directly by you through your hosting provider. Hosting plans typically range between $10 and $50 per year, depending on the provider and features.
             </p>
             <p className="text-brand-dark/80 text-lg mb-10 leading-relaxed">
               Payment for development can be made through PayPal or bank transfer (RIB). For larger projects, payment may be divided into two parts: one payment to start the project and the remaining balance after completion.
@@ -1082,7 +1082,7 @@ const Portfolio = () => {
           </section>
 
           {/* Projects */}
-          <section className="card-base p-10">
+          {/* <section className="card-base p-10">
             <h2 className="text-3xl font-bold mb-10 flex items-center gap-3">
               <Code2 className="text-brand-blue" /> Key Projects
             </h2>
@@ -1114,7 +1114,7 @@ const Portfolio = () => {
                 </motion.div>
               ))}
             </div>
-          </section>
+          </section> */}
         </div>
       </div>
       
