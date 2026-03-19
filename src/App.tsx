@@ -599,7 +599,7 @@ const Home = () => {
               />
               <motion.img 
                 whileHover={{ scale: 1.02, rotate: -1 }}
-                src="https://picsum.photos/seed/tech/800/800" 
+                src="/header.jpg" 
                 alt="Abstract Tech" 
                 className="rounded-3xl shadow-2xl relative z-20 w-full h-auto object-cover border-8 border-white transition-colors duration-300"
                 referrerPolicy="no-referrer"
