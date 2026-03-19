@@ -298,7 +298,7 @@ const About_Erp = () => {
                   <div className="w-6 h-6 bg-brand-blue rounded-full flex items-center justify-center text-white">
                     <ChevronRight size={20} />
                   </div>
-                  <span className="text-brand-dark/90">2 months of free support included</span>
+                  <span className="text-brand-dark/90">6 months of free support included</span>
                 </li>
               
             </ul>
@@ -673,6 +673,20 @@ const Home = () => {
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
           >
+            <h2 className="text-4xl font-bold mb-8">My services</h2>
+            <p className="text-brand-dark/80 text-lg mb-10 leading-relaxed">
+              Payment for development can be made through bank transfer (RIB) or PayPal or Cash. Payment after the live link. For larger projects, payment may be divided into two parts: one payment to start the project and the remaining balance after completion.
+            </p>
+            <ul className="space-y-4 mb-10">
+              {['Payment methods: Bank Transfer (RIB) or PayPal or Cash', 'Free support included after project delivery (includes minor fixes and small adjustments)' ].map((item, i) => (
+                <li key={i} className="flex items-center gap-3">
+                  <div className="w-6 h-6 bg-brand-blue rounded-full flex items-center justify-center text-white">
+                    <ChevronRight size={14} />
+                  </div>
+                  <span className="text-brand-dark/90">{item}</span>
+                </li>
+              ))}
+            </ul>
             <h2 className="text-4xl font-bold mb-8">About Hosting</h2>
             <p className="text-brand-dark/80 text-lg mb-6 leading-relaxed">
               All websites are delivered fully functional and ready to go live. I assist with the deployment process and make sure everything works correctly before the final delivery.
@@ -683,14 +697,12 @@ const Home = () => {
             <p className="text-brand-dark/80 text-lg mb-10 leading-relaxed">
               The domain name requires a yearly renewal, which is handled directly by you through your hosting provider. Hosting plans typically range between $10 and $50 per year, depending on the provider and features.
             </p>
-            <p className="text-brand-dark/80 text-lg mb-10 leading-relaxed">
-              Payment for development can be made through PayPal or bank transfer (RIB). For larger projects, payment may be divided into two parts: one payment to start the project and the remaining balance after completion.
-            </p>
+            
             <p className="text-brand-dark/80 text-lg mb-10 leading-relaxed">
               After delivery, I provide a free support period depending on the type of project. During this time I can assist with minor fixes, small adjustments, and guidance if needed.
             </p>
             <ul className="space-y-4 mb-10">
-              {['You own the domain and hosting account', 'Payment methods: PayPal or Bank Transfer (RIB)', 'Free support included after project delivery (includes minor fixes and small adjustments)' ].map((item, i) => (
+              {['You own the domain and hosting account' ].map((item, i) => (
                 <li key={i} className="flex items-center gap-3">
                   <div className="w-6 h-6 bg-brand-blue rounded-full flex items-center justify-center text-white">
                     <ChevronRight size={14} />
@@ -700,9 +712,9 @@ const Home = () => {
               ))}
             </ul>
             <div class="flex gap-6">
-              <Link to="/About_Erp" className="btn-primary flex-1 text-center">View erp</Link>
-              <Link to="/About_Landing" className="btn-primary flex-1 text-center">View landing</Link>
-              <Link to="/About_Portfolio" className="btn-primary flex-1 text-center">View portfolio</Link>
+              <Link to="/About_Erp" className="btn-primary flex-1 text-center">About ERP</Link>
+              <Link to="/About_Landing" className="btn-primary flex-1 text-center">About landing</Link>
+              <Link to="/About_Portfolio" className="btn-primary flex-1 text-center">About portfolio serives</Link>
             </div>
 
             {/* <Link to="/About_Erp" className="btn-primary inline-block mr-8">View erp</Link>
