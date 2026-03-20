@@ -674,8 +674,17 @@ const Home = () => {
             viewport={{ once: true }}
           >
             <h2 className="text-4xl font-bold mb-8">My services</h2>
+            <p className="text-brand-dark/80 text-lg mb-6 leading-relaxed">
+              I make you a website after you contact me, After we agree on which category do you need, the websites are delivered fully functional and ready to go live. I assist with the deployment process and make sure everything works correctly before the final delivery.
+            </p>
+            <p className="text-brand-dark/80 text-lg mb-6 leading-relaxed">
+              All websites are delivered fully functional and ready to go live. I assist with the deployment process and make sure everything works correctly before the final delivery.
+            </p>
             <p className="text-brand-dark/80 text-lg mb-10 leading-relaxed">
               Payment for development can be made through bank transfer (RIB) or PayPal or Cash. Payment after the live link. For larger projects, payment may be divided into two parts: one payment to start the project and the remaining balance after completion.
+            </p>
+            <p className="text-brand-dark/80 text-lg mb-10 leading-relaxed">
+              After delivery, I provide a free support period depending on the type of project. During this time I can assist with minor fixes, small adjustments, and guidance if needed.
             </p>
             <ul className="space-y-4 mb-10">
               {['Payment methods: Bank Transfer (RIB) or PayPal or Cash', 'Free support included after project delivery (includes minor fixes and small adjustments)' ].map((item, i) => (
@@ -689,17 +698,10 @@ const Home = () => {
             </ul>
             <h2 className="text-4xl font-bold mb-8">About Hosting</h2>
             <p className="text-brand-dark/80 text-lg mb-6 leading-relaxed">
-              All websites are delivered fully functional and ready to go live. I assist with the deployment process and make sure everything works correctly before the final delivery.
-            </p>
-            <p className="text-brand-dark/80 text-lg mb-6 leading-relaxed">
               To ensure transparency and full ownership, the domain and hosting are registered directly by the client. This means you keep complete control over your website, your files, and your hosting provider.
             </p>
             <p className="text-brand-dark/80 text-lg mb-10 leading-relaxed">
               The domain name requires a yearly renewal, which is handled directly by you through your hosting provider. Hosting plans typically range between $10 and $50 per year, depending on the provider and features.
-            </p>
-            
-            <p className="text-brand-dark/80 text-lg mb-10 leading-relaxed">
-              After delivery, I provide a free support period depending on the type of project. During this time I can assist with minor fixes, small adjustments, and guidance if needed.
             </p>
             <ul className="space-y-4 mb-10">
               {['You own the domain and hosting account' ].map((item, i) => (
