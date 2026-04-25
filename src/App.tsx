@@ -361,7 +361,7 @@ const About_Landing = () => {
             <p className="text-brand-dark/80 text-lg mb-6 leading-relaxed">
               Landing pages are designed for marketing campaigns, product launches, or business promotions. Their main goal is to convert visitors into customers or leads.            </p>
             <p className="text-brand-dark/80 text-lg mb-6 leading-relaxed">
-              These pages focus on clear messaging, strong visual design, and structured content that guides the visitor toward a specific action such as contacting you, signing up, or purchasing a service.            </p>
+              These pages focus on clear messaging, strong visual design, and structured content that guides the visitor toward a specific action such as contacting, signing up, or purchasing a service.            </p>
             <p className="text-brand-dark/80 text-lg mb-10 leading-relaxed">
               Landing page projects usually include 2–5 pages, depending on the needs of the campaign.            </p>
             <p className="text-brand-dark/80 text-lg mb-10 leading-relaxed">
@@ -676,12 +676,12 @@ const Home = () => {
 
             <h2 className="text-4xl font-bold mb-8">My services</h2>
             <p className="text-brand-dark/80 text-lg mb-6 leading-relaxed">
-              <b>Making websites, providing domain name and hosting account.</b> After we agree on which category you need, the website is delivered fully functional and ready to go live.
+              <b>Making websites, providing domain name and hosting account.</b> After we agree on which category is needed, the website is delivered fully functional and ready to go live.
                I assist with the deployment process and make sure everything works correctly before the final delivery.
             </p>
-            <p className="text-brand-dark/80 text-lg mb-6 leading-relaxed">
+            {/* <p className="text-brand-dark/80 text-lg mb-6 leading-relaxed">
               All websites are delivered fully functional and ready to go live. I assist with the deployment process and make sure everything works correctly before the final delivery.
-            </p>
+            </p> */}
            
             <ul className="space-y-4 mb-10">
               {['Free support included after project delivery (includes minor fixes and small adjustments)' ].map((item, i) => (
@@ -696,13 +696,14 @@ const Home = () => {
 
             <h2 className="text-4xl font-bold mb-8">Hosting</h2>
             <p className="text-brand-dark/80 text-lg mb-6 leading-relaxed">
-              To ensure transparency and full ownership, the domain and hosting are registered directly by the client. This means you keep complete control over your website, your files, and your hosting provider, so you will have to pay 50% of the agreed price as fees for creating and registering your platform online. 
+              Hosting your online platform is created and registered by our team, the client can control over their website, files and hosting provider, hosting fees are to be paid by the client
+              
             </p>
             <p className="text-brand-dark/80 text-lg mb-10 leading-relaxed">
-              The domain name requires a yearly renewal, which is handled directly by you through your hosting provider. Hosting plans typically range between $10 and $50 per year, depending on the provider and features.
+              The domain name requires a yearly renewal, which is handled directly by the customer through the hosting provider. Hosting plans and fees typically range between $10 and $50 per year, depending on the provider and features.
             </p>
             <ul className="space-y-4 mb-10">
-              {['You own the domain and hosting account' ].map((item, i) => (
+              {['The client owns the domain and hosting account' ].map((item, i) => (
                 <li key={i} className="flex items-center gap-3">
                   <div className="w-6 h-6 bg-brand-blue rounded-full flex items-center justify-center text-white">
                     <ChevronRight size={14} />
@@ -714,10 +715,10 @@ const Home = () => {
             
             <h2 className="text-4xl font-bold mb-8">Payment</h2>
              <p className="text-brand-dark/80 text-lg mb-10 leading-relaxed">
-              Payment for development can be made through bank transfer (RIB) or PayPal or Cash.  
+              Payment can be made through bank transfer (RIB), PayPal or Cash.  <a href="#contact">contact me</a>
             </p>
             <p className="text-brand-dark/80 text-lg mb-10 leading-relaxed">
-              For larger projects, payment may be divided into two parts: one payment to start the project and the remaining balance after completion.
+              For larger projects, payment may be divided into two parts: one payment to start the project and the remaining balance after completion. 
             </p>
            
             <div class="flex gap-6">
