@@ -711,12 +711,7 @@ const Home = () => {
                 </li>
               ))}
             </ul>
-            <div class="flex gap-6">
-              <Link to="/About_Erp" className="btn-primary flex-1 text-center">About ERP</Link>
-              <Link to="/About_Landing" className="btn-primary flex-1 text-center">About landing</Link>
-              <Link to="/About_Portfolio" className="btn-primary flex-1 text-center">About portfolio serives</Link>
-            </div>
-
+            
             <h2 className="text-4xl font-bold mb-8">Payment</h2>
              <p className="text-brand-dark/80 text-lg mb-10 leading-relaxed">
               Payment for development can be made through bank transfer (RIB) or PayPal or Cash.  
