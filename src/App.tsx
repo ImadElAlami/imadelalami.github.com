@@ -677,7 +677,11 @@ const Home = () => {
             <h2 className="text-4xl font-bold mb-8">My services</h2>
             <p className="text-brand-dark/80 text-lg mb-6 leading-relaxed">
               <b>Making websites, providing domain name and hosting account.</b> After we agree on which category is needed, the website is delivered fully functional and ready to go live.
-               I assist with the deployment process and make sure everything works correctly before the final delivery.
+               
+            </p>
+
+            <p className="text-brand-dark/80 text-lg mb-10 leading-relaxed">
+              I assist with the deployment process and make sure everything works correctly before the final delivery.
             </p>
             {/* <p className="text-brand-dark/80 text-lg mb-6 leading-relaxed">
               All websites are delivered fully functional and ready to go live. I assist with the deployment process and make sure everything works correctly before the final delivery.
@@ -715,7 +719,7 @@ const Home = () => {
             
             <h2 className="text-4xl font-bold mb-8">Payment</h2>
              <p className="text-brand-dark/80 text-lg mb-10 leading-relaxed">
-              Payment can be made through bank transfer (RIB), PayPal or Cash.  <a href="#contact">contact me</a>
+              Payment can be made through bank transfer (RIB), PayPal or Cash.  <a href="#contact" className="text-brand-blue hover:underline">contact me</a>
             </p>
             <p className="text-brand-dark/80 text-lg mb-10 leading-relaxed">
               For larger projects, payment may be divided into two parts: one payment to start the project and the remaining balance after completion. 
