@@ -634,7 +634,8 @@ const Home = () => {
                 whileHover={{ y: -10 }}
                 className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all border border-brand-blue/5"
               >
-                <Link to={project.example} className="text-brand-blue font-bold flex items-center gap-2 hover:gap-3 transition-all">
+                  <Link to={project.example} >
+                
                 <div className="overflow-hidden">
                   <motion.img 
                     whileHover={{ scale: 1.1 }}
@@ -653,9 +654,9 @@ const Home = () => {
                   <p className="text-brand-dark/60 text-sm mb-6">
                     {project.desc2}
                   </p>
-                  
+                  <Link to={project.example} className="text-brand-blue font-bold flex items-center gap-2 hover:gap-3 transition-all">
                     Learn More <ChevronRight size={16} />
-                  
+                  </Link>
                 </div>
                 </Link>
               </motion.div>
