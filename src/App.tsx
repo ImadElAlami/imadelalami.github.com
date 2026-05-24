@@ -1,4 +1,12 @@
-import { BrowserRouter, HashRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
+import {
+  BrowserRouter,
+  HashRouter,
+  Routes,
+  Route,
+  Link,
+  useLocation,
+  useNavigate,
+} from 'react-router-dom';
 const Router = import.meta.env.PROD ? HashRouter : BrowserRouter;
 import { useEffect } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
@@ -23,32 +31,36 @@ import {
 } from 'lucide-react';
 import { useState } from 'react';
 
-export default function Navbar() {
-  const location = useLocation();
-  const navigate = useNavigate();
-
-  const switchLanguage = () => {
-    if (location.pathname.startsWith("/en")) {
-      // EN -> FR
-      navigate(location.pathname.replace("/en", "") || "/");
-    } else {
-      // FR -> EN
-      navigate("/en" + location.pathname);
-    }
-  };
-
-  return (
-    <button onClick={switchLanguage}>
-      {location.pathname.startsWith("/en") ? "FR" : "EN"}
-    </button>
-  );
-}
 
 // --- Components ---
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
+  
+  const navigate = useNavigate();
+
+const switchLanguage = () => {
+  const path = location.pathname;
+
+  const routeMap: Record<string, string> = {
+    "/": "/fr",
+    "/portfolio": "/fr/portfolio",
+    "/contact": "/fr/contact",
+    "/About_Erp": "/fr/About_Erp",
+    "/About_Landing": "/fr/About_Landing",
+    "/About_Portfolio": "/fr/About_Portfolio",
+
+    "/fr": "/",
+    "/fr/portfolio": "/portfolio",
+    "/fr/contact": "/contact",
+    "/fr/About_Erp": "/About_Erp",
+    "/fr/About_Landing": "/About_Landing",
+    "/fr/About_Portfolio": "/About_Portfolio",
+  };
+
+  navigate(routeMap[path] || "/");
+};
 
   const navLinks = [
     { name: 'Home', path: '/' },
@@ -84,6 +96,13 @@ const Navbar = () => {
             </Link>
           ))}
           
+          <button
+  onClick={switchLanguage}
+  className="px-4 py-2 rounded-lg border border-brand-blue text-brand-blue font-bold hover:bg-brand-blue hover:text-white transition-all"
+>
+  {location.pathname.startsWith("/fr") ? "EN" : "FR"}
+</button>
+
           <motion.a 
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
@@ -123,6 +142,16 @@ const Navbar = () => {
                 {link.name}
               </Link>
             ))}
+            <button
+  onClick={() => {
+    switchLanguage();
+    setIsOpen(false);
+  }}
+  className="btn-secondary"
+>
+  {location.pathname.startsWith("/fr") ? "EN" : "FR"}
+</button>
+
             <a href="#contact" onClick={() => setIsOpen(false)} className="btn-primary text-center">
               Contact Me
             </a>
