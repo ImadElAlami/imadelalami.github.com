@@ -23,6 +23,27 @@ import {
 } from 'lucide-react';
 import { useState } from 'react';
 
+export default function Navbar() {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const switchLanguage = () => {
+    if (location.pathname.startsWith("/en")) {
+      // EN -> FR
+      navigate(location.pathname.replace("/en", "") || "/");
+    } else {
+      // FR -> EN
+      navigate("/en" + location.pathname);
+    }
+  };
+
+  return (
+    <button onClick={switchLanguage}>
+      {location.pathname.startsWith("/en") ? "FR" : "EN"}
+    </button>
+  );
+}
+
 // --- Components ---
 
 const Navbar = () => {
@@ -1156,15 +1177,27 @@ export default function App() {
       <ScrollToTop />
       <div className="min-h-screen flex flex-col transition-colors duration-300">
         <Navbar />
+
         <main className="flex-grow">
           <AnimatePresence mode="wait">
             <Routes>
+
               <Route path="/" element={<Home />} />
               <Route path="/portfolio" element={<Portfolio />} />
               <Route path="/contact" element={<ContactSection />} />
               <Route path="/About_Erp" element={<About_Erp />} />
               <Route path="/About_Landing" element={<About_Landing />} />
               <Route path="/About_Portfolio" element={<About_Portfolio />} />
+
+              {/* FRENCH */}
+              <Route path="/fr" element={<HomeFR />} />
+              <Route path="/fr/portfolio" element={<PortfolioFR />} />
+              <Route path="/fr/contact" element={<ContactSectionFR />} />
+              <Route path="/fr/About_Erp" element={<About_ErpFR />} />
+              <Route path="/fr/About_Landing" element={<About_LandingFR />} />
+              <Route path="/fr/About_Portfolio" element={<About_PortfolioFR />} />
+
+
             </Routes>
           </AnimatePresence>
         </main>
