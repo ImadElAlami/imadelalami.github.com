@@ -43,33 +43,41 @@ const Navbar = () => {
 const switchLanguage = () => {
   const path = location.pathname;
 
-  const routeMap: Record<string, string> = {
-    "/": "/fr",
-    "/portfolio": "/fr/portfolio",
-    "/contact": "/fr/contact",
-    "/About_Erp": "/fr/About_Erp",
-    "/About_Landing": "/fr/About_Landing",
-    "/About_Portfolio": "/fr/About_Portfolio",
+    const isFr = path.startsWith("/fr");
 
-    "/fr": "/",
-    "/fr/portfolio": "/portfolio",
-    "/fr/contact": "/contact",
-    "/fr/About_Erp": "/About_Erp",
-    "/fr/About_Landing": "/About_Landing",
-    "/fr/About_Portfolio": "/About_Portfolio",
-  };
+     const newPath = isFr
+    ? path.replace("/fr", "") || "/"
+    : `/fr${path === "/" ? "" : path}`;
 
-  navigate(routeMap[path] || "/");
+  navigate(newPath);
+
+  //delete this (below)
+  // const routeMap: Record<string, string> = {
+  //   "/": "/fr",
+  //   "/portfolio": "/fr/portfolio",
+  //   "/contact": "/fr/contact",
+  //   "/About_Erp": "/fr/About_Erp",
+  //   "/About_Landing": "/fr/About_Landing",
+  //   "/About_Portfolio": "/fr/About_Portfolio",
+
+  //   "/fr": "/",
+  //   "/fr/portfolio": "/portfolio",
+  //   "/fr/contact": "/contact",
+  //   "/fr/About_Erp": "/About_Erp",
+  //   "/fr/About_Landing": "/About_Landing",
+  //   "/fr/About_Portfolio": "/About_Portfolio",
+  // };
+
+  // navigate(routeMap[path] || "/");
 };
 
-  const navLinks = [
-    { name: 'Home', path: '/' },
-    { name: 'About Me', path: '/portfolio' },
-    { name: 'ERP', path: '/About_Erp' },
-    { name: 'Landing page', path: '/About_Landing' },
-    { name: 'Portfolio Services', path: '/About_Portfolio' },
-
-  ];
+const navLinks = [
+  { name: { en: "Home", fr: "Accueil" }, path: "/" },
+  { name: { en: "About Me", fr: "À propos" }, path: "/portfolio" },
+  { name: { en: "ERP", fr: "ERP" }, path: "/About_Erp" },
+  { name: { en: "Landing page", fr: "Page d’atterrissage" }, path: "/About_Landing" },
+  { name: { en: "Portfolio Services", fr: "Services Portfolio" }, path: "/About_Portfolio" },
+];
 
   return (
     <nav className="glass-nav">
