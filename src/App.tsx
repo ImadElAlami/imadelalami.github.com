@@ -35,7 +35,6 @@ import { useState } from 'react';
 // --- Components ---
 
 const Navbar = () => {
-  const isFr = location.pathname.startsWith("/fr");
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
   
@@ -72,13 +71,14 @@ const switchLanguage = () => {
   // navigate(routeMap[path] || "/");
 };
 
-const navLinks = [
-  { name: { en: "Home", fr: "Accueil" }, path: "/" },
-  { name: { en: "About Me", fr: "À propos" }, path: "/portfolio" },
-  { name: { en: "ERP", fr: "ERP" }, path: "/About_Erp" },
-  { name: { en: "Landing page", fr: "Page d’atterrissage" }, path: "/About_Landing" },
-  { name: { en: "Portfolio Services", fr: "Services Portfolio" }, path: "/About_Portfolio" },
-];
+  const navLinks = [
+    { name: 'Home', path: '/' },
+    { name: 'About Me', path: '/portfolio' },
+    { name: 'ERP', path: '/About_Erp' },
+    { name: 'Landing page', path: '/About_Landing' },
+    { name: 'Portfolio Services', path: '/About_Portfolio' },
+
+  ];
 
   return (
     <nav className="glass-nav">
@@ -94,13 +94,13 @@ const navLinks = [
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <Link
-              key={link.path}
+              key={link.name}
               to={link.path}
               className={`font-medium transition-all duration-300 hover:text-brand-blue relative group ${
                 location.pathname === link.path ? 'text-brand-blue' : 'text-brand-dark/70'
               }`}
             >
-              {isFr ? link.name.fr : link.name.en}
+              {link.name}
               <span className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-blue transition-all duration-300 group-hover:w-full ${location.pathname === link.path ? 'w-full' : ''}`} />
             </Link>
           ))}
@@ -141,14 +141,14 @@ const navLinks = [
           >
             {navLinks.map((link) => (
               <Link
-                key={link.path}
+                key={link.name}
                 to={link.path}
                 onClick={() => setIsOpen(false)}
                 className={`text-lg font-medium ${
                   location.pathname === link.path ? 'text-brand-blue' : 'text-brand-dark/70'
                 }`}
               >
-                {isFr ? link.name.fr : link.name.en}
+                {link.name}
               </Link>
             ))}
             <button
