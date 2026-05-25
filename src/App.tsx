@@ -35,6 +35,7 @@ import { useState } from 'react';
 // --- Components ---
 
 const Navbar = () => {
+  const isFr = location.pathname.startsWith("/fr");
   const [isOpen, setIsOpen] = useState(false);
   const location = useLocation();
   
@@ -93,13 +94,13 @@ const navLinks = [
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <Link
-              key={link.name}
+              key={link.path}
               to={link.path}
               className={`font-medium transition-all duration-300 hover:text-brand-blue relative group ${
                 location.pathname === link.path ? 'text-brand-blue' : 'text-brand-dark/70'
               }`}
             >
-              {link.name}
+              {isFr ? link.name.fr : link.name.en}
               <span className={`absolute -bottom-1 left-0 w-0 h-0.5 bg-brand-blue transition-all duration-300 group-hover:w-full ${location.pathname === link.path ? 'w-full' : ''}`} />
             </Link>
           ))}
@@ -140,14 +141,14 @@ const navLinks = [
           >
             {navLinks.map((link) => (
               <Link
-                key={link.name}
+                key={link.path}
                 to={link.path}
                 onClick={() => setIsOpen(false)}
                 className={`text-lg font-medium ${
                   location.pathname === link.path ? 'text-brand-blue' : 'text-brand-dark/70'
                 }`}
               >
-                {link.name}
+                {isFr ? link.name.fr : link.name.en}
               </Link>
             ))}
             <button
