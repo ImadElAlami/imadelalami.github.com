@@ -1324,7 +1324,8 @@ const HomeFR = () => {
               <Link to="/fr/portfolio" className="btn-primary flex items-center gap-2">
                 Voir le portfolio <ChevronRight size={18} />
               </Link>
-              <a href="#contact" className="btn-secondary">
+              {/* <a href="#contact" className="btn-secondary"> */}
+              <a href="/fr/contact" className="btn-secondary">
                 Me contacter
               </a>
             </motion.div>
@@ -1629,7 +1630,7 @@ const HomeFR = () => {
       </section>
 
       {/* Contact */}
-      <ContactSection />
+      <ContactSectionFR />
     </motion.div>
   );
 };
@@ -2146,7 +2147,7 @@ const About_ErpFR = () => {
 
           </ul>
 
-          <Link to="/portfolio" className="btn-primary inline-block">
+          <Link to="/fr/portfolio" className="btn-primary inline-block">
             Voir le CV complet
           </Link>
 
@@ -2256,7 +2257,7 @@ const About_LandingFR = () => {
 
           </ul>
 
-          <Link to="/portfolio" className="btn-primary inline-block">
+          <Link to="/fr/portfolio" className="btn-primary inline-block">
             Voir le CV complet
           </Link>
 
@@ -2367,7 +2368,7 @@ const About_PortfolioFR = () => {
 
           </ul>
 
-          <Link to="/portfolio" className="btn-primary inline-block">
+          <Link to="/fr/portfolio" className="btn-primary inline-block">
             Voir le CV complet
           </Link>
 
