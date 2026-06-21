@@ -341,7 +341,7 @@ const Home = () => {
                     transition={{ duration: 0.5 }}
                     src={project.pic} 
                     alt={project.title} 
-                    className="w-full h-48 object-cover"
+                    className="w-full h-100 object-cover"
                     referrerPolicy="no-referrer"
                   />
                 </div>
@@ -1414,7 +1414,7 @@ const HomeFR = () => {
                       transition={{ duration: 0.5 }}
                       src={project.pic}
                       alt={project.title}
-                      className="w-full h-48 object-cover"
+                      className="w-full h-100 object-cover"
                       referrerPolicy="no-referrer"
                     />
                   </div>
