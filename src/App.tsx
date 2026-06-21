@@ -74,7 +74,7 @@ const switchLanguage = () => {
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'About Me', path: '/portfolio' },
-    { name: 'ERP', path: '/About_Erp' },
+    // { name: 'ERP', path: '/About_Erp' },
     { name: 'Landing page', path: '/About_Landing' },
     { name: 'Portfolio Services', path: '/About_Portfolio' },
 
@@ -316,7 +316,7 @@ const Home = () => {
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-                { title: 'Enterprise Resource Planning (ERP)', desc: 'Easy to manage websites made to have a smooth experience with your Enterprise.', desc2:'10+ pages', pic: '/ERP.png', example: '/About_Erp'},
+                // { title: 'Enterprise Resource Planning (ERP)', desc: 'Easy to manage websites made to have a smooth experience with your Enterprise.', desc2:'10+ pages', pic: '/ERP.png', example: '/About_Erp'},
                 { title: 'Landing Pages', desc: 'High-converting landing pages for marketing campaigns.', desc2:'2-5 pages', pic: '/Landing_page.png', example: '/About_Landing'},
                 { title: 'Portfolio Page', desc: 'Professional websites tailored to your identity.', desc2:'1-2 pages',pic: '/Portfolio.png', example: '/About_Portfolio'},
               ].map((project, i) => (
@@ -424,7 +424,7 @@ const Home = () => {
             </p>
            
             <div class="flex gap-6">
-              <Link to="/About_Erp" className="btn-primary flex-1 text-center">About ERP</Link>
+              {/* <Link to="/About_Erp" className="btn-primary flex-1 text-center">About ERP</Link> */}
               <Link to="/About_Landing" className="btn-primary flex-1 text-center">About landing</Link>
               <Link to="/About_Portfolio" className="btn-primary flex-1 text-center">About portfolio serives</Link>
             </div>
@@ -960,91 +960,91 @@ const ContactSection = () => {
 };
 
 // --- Services ---
-const About_Erp = () => {
-  return (
+// const About_Erp = () => {
+//   return (
     
-      <section className="section-padding bg-white text-brand-dark overflow-hidden transition-colors duration-300">
-        <header className="bg-brand-blue/5 text-brand-dark py-24 px-6 text-center relative overflow-hidden transition-colors duration-300">
-        <div className="max-w-7xl mx-auto relative z-10">
-          <motion.h1 
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            className="text-5xl md:text-6xl font-bold mb-6"
-          >
-            About Enterprise Resource Planning (ERP) pages
-          </motion.h1>
-          <p className="text-brand-dark/60 text-lg max-w-2xl mx-auto">
-            Easy to manage websites made to have a smooth experience with your Enterprise.
-          </p>
-        </div>
-        <div className="absolute top-0 left-0 w-full h-full opacity-10">
-          <div className="absolute top-10 left-10 w-64 h-64 bg-brand-blue rounded-full blur-3xl" />
-          <div className="absolute bottom-10 right-10 w-64 h-64 bg-brand-royal rounded-full blur-3xl" />
-        </div>
-      </header>
-<br /><br /><br />
+//       <section className="section-padding bg-white text-brand-dark overflow-hidden transition-colors duration-300">
+//         <header className="bg-brand-blue/5 text-brand-dark py-24 px-6 text-center relative overflow-hidden transition-colors duration-300">
+//         <div className="max-w-7xl mx-auto relative z-10">
+//           <motion.h1 
+//             initial={{ y: 20, opacity: 0 }}
+//             animate={{ y: 0, opacity: 1 }}
+//             className="text-5xl md:text-6xl font-bold mb-6"
+//           >
+//             About Enterprise Resource Planning (ERP) pages
+//           </motion.h1>
+//           <p className="text-brand-dark/60 text-lg max-w-2xl mx-auto">
+//             Easy to manage websites made to have a smooth experience with your Enterprise.
+//           </p>
+//         </div>
+//         <div className="absolute top-0 left-0 w-full h-full opacity-10">
+//           <div className="absolute top-10 left-10 w-64 h-64 bg-brand-blue rounded-full blur-3xl" />
+//           <div className="absolute bottom-10 right-10 w-64 h-64 bg-brand-royal rounded-full blur-3xl" />
+//         </div>
+//       </header>
+// <br /><br /><br />
 
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <motion.div 
-            initial={{ opacity: 0, x: -50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            className="relative"
-          >
-            <img 
-              src="/ERP.png" 
-              alt="About ERP" 
-              className="rounded-2xl shadow-2xl w-full max-w-md mx-auto grayscale hover:grayscale-0 transition-all duration-500"
-              referrerPolicy="no-referrer"
-            />
-            <div className="absolute -bottom-6 -right-6 bg-brand-blue p-8 rounded-2xl hidden md:block">
-              <div className="text-4xl font-bold text-white">10+</div>
-              <div className="text-sm uppercase tracking-widest text-white/80">Pages.</div>
-            </div>
-          </motion.div>
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-          >
-            <h2 className="text-4xl font-bold mb-8">ERP / Business Systems</h2>
-            <p className="text-brand-dark/80 text-lg mb-6 leading-relaxed">
-              ERP or business systems are more advanced projects designed to help companies manage internal processes such as data management, dashboards, client systems, or administrative tools.
-            </p>
-            <p className="text-brand-dark/80 text-lg mb-6 leading-relaxed">
-              These platforms are typically larger and more complex, with multiple pages and features tailored to the business workflow.
-            </p>
-            <p className="text-brand-dark/80 text-lg mb-10 leading-relaxed">
-              ERP systems usually include 10+ pages and may involve dashboards, data management interfaces, and custom functionality.
-            </p>
-            <p className="text-brand-dark/80 text-lg mb-10 leading-relaxed">
-              Due to their complexity, ERP projects include up to 5 months of free support after delivery, allowing time to ensure everything runs smoothly and any adjustments can be made if necessary.
-            </p>
-            <ul className="space-y-4 mb-10">
-              {['Built for internal business management', 'Custom dashboards, administrative tools and data management interfaces', 'Designed for long-term business use'].map((item, i) => (
-                <li key={i} className="flex items-center gap-3">
-                  <div className="w-6 h-6 bg-brand-blue rounded-full flex items-center justify-center text-white">
-                    <ChevronRight size={14} />
-                  </div>
-                  <span className="text-brand-dark/90">{item}</span>
-                </li>
-              ))}
-              <li className="flex items-center gap-3">
-                  <div className="w-6 h-6 bg-brand-blue rounded-full flex items-center justify-center text-white">
-                    <ChevronRight size={20} />
-                  </div>
-                  <span className="text-brand-dark/90">5 months of free support included</span>
-                </li>
+//         <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+//           <motion.div 
+//             initial={{ opacity: 0, x: -50 }}
+//             whileInView={{ opacity: 1, x: 0 }}
+//             viewport={{ once: true }}
+//             className="relative"
+//           >
+//             <img 
+//               src="/ERP.png" 
+//               alt="About ERP" 
+//               className="rounded-2xl shadow-2xl w-full max-w-md mx-auto grayscale hover:grayscale-0 transition-all duration-500"
+//               referrerPolicy="no-referrer"
+//             />
+//             <div className="absolute -bottom-6 -right-6 bg-brand-blue p-8 rounded-2xl hidden md:block">
+//               <div className="text-4xl font-bold text-white">10+</div>
+//               <div className="text-sm uppercase tracking-widest text-white/80">Pages.</div>
+//             </div>
+//           </motion.div>
+//           <motion.div
+//             initial={{ opacity: 0, x: 50 }}
+//             whileInView={{ opacity: 1, x: 0 }}
+//             viewport={{ once: true }}
+//           >
+//             <h2 className="text-4xl font-bold mb-8">ERP / Business Systems</h2>
+//             <p className="text-brand-dark/80 text-lg mb-6 leading-relaxed">
+//               ERP or business systems are more advanced projects designed to help companies manage internal processes such as data management, dashboards, client systems, or administrative tools.
+//             </p>
+//             <p className="text-brand-dark/80 text-lg mb-6 leading-relaxed">
+//               These platforms are typically larger and more complex, with multiple pages and features tailored to the business workflow.
+//             </p>
+//             <p className="text-brand-dark/80 text-lg mb-10 leading-relaxed">
+//               ERP systems usually include 10+ pages and may involve dashboards, data management interfaces, and custom functionality.
+//             </p>
+//             <p className="text-brand-dark/80 text-lg mb-10 leading-relaxed">
+//               Due to their complexity, ERP projects include up to 5 months of free support after delivery, allowing time to ensure everything runs smoothly and any adjustments can be made if necessary.
+//             </p>
+//             <ul className="space-y-4 mb-10">
+//               {['Built for internal business management', 'Custom dashboards, administrative tools and data management interfaces', 'Designed for long-term business use'].map((item, i) => (
+//                 <li key={i} className="flex items-center gap-3">
+//                   <div className="w-6 h-6 bg-brand-blue rounded-full flex items-center justify-center text-white">
+//                     <ChevronRight size={14} />
+//                   </div>
+//                   <span className="text-brand-dark/90">{item}</span>
+//                 </li>
+//               ))}
+//               <li className="flex items-center gap-3">
+//                   <div className="w-6 h-6 bg-brand-blue rounded-full flex items-center justify-center text-white">
+//                     <ChevronRight size={20} />
+//                   </div>
+//                   <span className="text-brand-dark/90">5 months of free support included</span>
+//                 </li>
               
-            </ul>
-            <Link to="/portfolio" className="btn-primary inline-block">View Full Resume</Link>
-          </motion.div>
-        </div>
-        <ContactSection />
-      </section>
+//             </ul>
+//             <Link to="/portfolio" className="btn-primary inline-block">View Full Resume</Link>
+//           </motion.div>
+//         </div>
+//         <ContactSection />
+//       </section>
       
-  );
-};
+//   );
+// };
 const About_Landing = () => {
   return (
     
@@ -1325,7 +1325,7 @@ const HomeFR = () => {
                 Voir le portfolio <ChevronRight size={18} />
               </Link>
               {/* <a href="#contact" className="btn-secondary"> */}
-              <a href="/fr/contact" className="btn-secondary">
+              <a href="/#/fr/contact" className="btn-secondary">
                 Me contacter
               </a>
             </motion.div>
@@ -1374,13 +1374,13 @@ const HomeFR = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {[
-              {
-                title: "ERP (Gestion d’entreprise)",
-                desc: "Sites faciles à gérer offrant une expérience fluide pour votre entreprise.",
-                desc2: "10+ pages",
-                pic: "/ERP.png",
-                example: "/fr/About_Erp"
-              },
+              // {
+              //   title: "ERP (Gestion d’entreprise)",
+              //   desc: "Sites faciles à gérer offrant une expérience fluide pour votre entreprise.",
+              //   desc2: "10+ pages",
+              //   pic: "/ERP.png",
+              //   example: "/fr/About_Erp"
+              // },
               {
                 title: "Pages d’atterrissage",
                 desc: "Pages à forte conversion pour campagnes marketing.",
@@ -1503,9 +1503,9 @@ const HomeFR = () => {
               </p>
 
               <div className="flex gap-6">
-                <Link to="/fr/About_Erp" className="btn-primary flex-1 text-center">
+                {/* <Link to="/fr/About_Erp" className="btn-primary flex-1 text-center">
                   ERP
-                </Link>
+                </Link> */}
                 <Link to="/fr/About_Landing" className="btn-primary flex-1 text-center">
                   Landing
                 </Link>
@@ -2048,116 +2048,116 @@ const ContactSectionFR = () => {
 };
 
 // --- Services ---
-const About_ErpFR = () => {
-  return (
-    <section className="section-padding bg-white text-brand-dark overflow-hidden transition-colors duration-300">
+// const About_ErpFR = () => {
+//   return (
+//     <section className="section-padding bg-white text-brand-dark overflow-hidden transition-colors duration-300">
 
-      <header className="bg-brand-blue/5 text-brand-dark py-24 px-6 text-center relative overflow-hidden transition-colors duration-300">
-        <div className="max-w-7xl mx-auto relative z-10">
-          <motion.h1
-            initial={{ y: 20, opacity: 0 }}
-            animate={{ y: 0, opacity: 1 }}
-            className="text-5xl md:text-6xl font-bold mb-6"
-          >
-            À propos des pages Enterprise Resource Planning (ERP)
-          </motion.h1>
+//       <header className="bg-brand-blue/5 text-brand-dark py-24 px-6 text-center relative overflow-hidden transition-colors duration-300">
+//         <div className="max-w-7xl mx-auto relative z-10">
+//           <motion.h1
+//             initial={{ y: 20, opacity: 0 }}
+//             animate={{ y: 0, opacity: 1 }}
+//             className="text-5xl md:text-6xl font-bold mb-6"
+//           >
+//             À propos des pages Enterprise Resource Planning (ERP)
+//           </motion.h1>
 
-          <p className="text-brand-dark/60 text-lg max-w-2xl mx-auto">
-            Des sites faciles à gérer conçus pour offrir une expérience fluide à votre entreprise.
-          </p>
-        </div>
+//           <p className="text-brand-dark/60 text-lg max-w-2xl mx-auto">
+//             Des sites faciles à gérer conçus pour offrir une expérience fluide à votre entreprise.
+//           </p>
+//         </div>
 
-        <div className="absolute top-0 left-0 w-full h-full opacity-10">
-          <div className="absolute top-10 left-10 w-64 h-64 bg-brand-blue rounded-full blur-3xl" />
-          <div className="absolute bottom-10 right-10 w-64 h-64 bg-brand-royal rounded-full blur-3xl" />
-        </div>
-      </header>
+//         <div className="absolute top-0 left-0 w-full h-full opacity-10">
+//           <div className="absolute top-10 left-10 w-64 h-64 bg-brand-blue rounded-full blur-3xl" />
+//           <div className="absolute bottom-10 right-10 w-64 h-64 bg-brand-royal rounded-full blur-3xl" />
+//         </div>
+//       </header>
 
-      <br /><br /><br />
+//       <br /><br /><br />
 
-      <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+//       <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
 
-        {/* LEFT IMAGE */}
-        <motion.div
-          initial={{ opacity: 0, x: -50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          className="relative"
-        >
-          <img
-            src="/ERP.png"
-            alt="ERP"
-            className="rounded-2xl shadow-2xl w-full max-w-md mx-auto grayscale hover:grayscale-0 transition-all duration-500"
-            referrerPolicy="no-referrer"
-          />
+//         {/* LEFT IMAGE */}
+//         <motion.div
+//           initial={{ opacity: 0, x: -50 }}
+//           whileInView={{ opacity: 1, x: 0 }}
+//           viewport={{ once: true }}
+//           className="relative"
+//         >
+//           <img
+//             src="/ERP.png"
+//             alt="ERP"
+//             className="rounded-2xl shadow-2xl w-full max-w-md mx-auto grayscale hover:grayscale-0 transition-all duration-500"
+//             referrerPolicy="no-referrer"
+//           />
 
-          <div className="absolute -bottom-6 -right-6 bg-brand-blue p-8 rounded-2xl hidden md:block">
-            <div className="text-4xl font-bold text-white">10+</div>
-            <div className="text-sm uppercase tracking-widest text-white/80">Pages</div>
-          </div>
-        </motion.div>
+//           <div className="absolute -bottom-6 -right-6 bg-brand-blue p-8 rounded-2xl hidden md:block">
+//             <div className="text-4xl font-bold text-white">10+</div>
+//             <div className="text-sm uppercase tracking-widest text-white/80">Pages</div>
+//           </div>
+//         </motion.div>
 
-        {/* RIGHT CONTENT */}
-        <motion.div
-          initial={{ opacity: 0, x: 50 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-        >
-          <h2 className="text-4xl font-bold mb-8">Systèmes ERP / Gestion d’entreprise</h2>
+//         {/* RIGHT CONTENT */}
+//         <motion.div
+//           initial={{ opacity: 0, x: 50 }}
+//           whileInView={{ opacity: 1, x: 0 }}
+//           viewport={{ once: true }}
+//         >
+//           <h2 className="text-4xl font-bold mb-8">Systèmes ERP / Gestion d’entreprise</h2>
 
-          <p className="text-brand-dark/80 text-lg mb-6 leading-relaxed">
-            Les systèmes ERP sont des projets avancés conçus pour aider les entreprises à gérer leurs processus internes tels que la gestion des données, les tableaux de bord, les systèmes clients ou les outils administratifs.
-          </p>
+//           <p className="text-brand-dark/80 text-lg mb-6 leading-relaxed">
+//             Les systèmes ERP sont des projets avancés conçus pour aider les entreprises à gérer leurs processus internes tels que la gestion des données, les tableaux de bord, les systèmes clients ou les outils administratifs.
+//           </p>
 
-          <p className="text-brand-dark/80 text-lg mb-6 leading-relaxed">
-            Ces plateformes sont généralement plus grandes et plus complexes, avec plusieurs pages et des fonctionnalités adaptées au flux de travail de l’entreprise.
-          </p>
+//           <p className="text-brand-dark/80 text-lg mb-6 leading-relaxed">
+//             Ces plateformes sont généralement plus grandes et plus complexes, avec plusieurs pages et des fonctionnalités adaptées au flux de travail de l’entreprise.
+//           </p>
 
-          <p className="text-brand-dark/80 text-lg mb-10 leading-relaxed">
-            Les systèmes ERP incluent généralement plus de 10 pages et peuvent contenir des tableaux de bord, des interfaces de gestion de données et des fonctionnalités personnalisées.
-          </p>
+//           <p className="text-brand-dark/80 text-lg mb-10 leading-relaxed">
+//             Les systèmes ERP incluent généralement plus de 10 pages et peuvent contenir des tableaux de bord, des interfaces de gestion de données et des fonctionnalités personnalisées.
+//           </p>
 
-          <p className="text-brand-dark/80 text-lg mb-10 leading-relaxed">
-            En raison de leur complexité, les projets ERP incluent jusqu’à 5 mois de support gratuit après livraison, afin de garantir un fonctionnement optimal et permettre des ajustements si nécessaire.
-          </p>
+//           <p className="text-brand-dark/80 text-lg mb-10 leading-relaxed">
+//             En raison de leur complexité, les projets ERP incluent jusqu’à 5 mois de support gratuit après livraison, afin de garantir un fonctionnement optimal et permettre des ajustements si nécessaire.
+//           </p>
 
-          <ul className="space-y-4 mb-10">
+//           <ul className="space-y-4 mb-10">
 
-            {[
-              "Conçu pour la gestion interne des entreprises",
-              "Tableaux de bord personnalisés, outils administratifs et interfaces de gestion de données",
-              "Pensé pour une utilisation professionnelle à long terme"
-            ].map((item, i) => (
-              <li key={i} className="flex items-center gap-3">
-                <div className="w-6 h-6 bg-brand-blue rounded-full flex items-center justify-center text-white">
-                  <ChevronRight size={14} />
-                </div>
-                <span className="text-brand-dark/90">{item}</span>
-              </li>
-            ))}
+//             {[
+//               "Conçu pour la gestion interne des entreprises",
+//               "Tableaux de bord personnalisés, outils administratifs et interfaces de gestion de données",
+//               "Pensé pour une utilisation professionnelle à long terme"
+//             ].map((item, i) => (
+//               <li key={i} className="flex items-center gap-3">
+//                 <div className="w-6 h-6 bg-brand-blue rounded-full flex items-center justify-center text-white">
+//                   <ChevronRight size={14} />
+//                 </div>
+//                 <span className="text-brand-dark/90">{item}</span>
+//               </li>
+//             ))}
 
-            <li className="flex items-center gap-3">
-              <div className="w-6 h-6 bg-brand-blue rounded-full flex items-center justify-center text-white">
-                <ChevronRight size={20} />
-              </div>
-              <span className="text-brand-dark/90">
-                5 mois de support gratuit inclus
-              </span>
-            </li>
+//             <li className="flex items-center gap-3">
+//               <div className="w-6 h-6 bg-brand-blue rounded-full flex items-center justify-center text-white">
+//                 <ChevronRight size={20} />
+//               </div>
+//               <span className="text-brand-dark/90">
+//                 5 mois de support gratuit inclus
+//               </span>
+//             </li>
 
-          </ul>
+//           </ul>
 
-          <Link to="/fr/portfolio" className="btn-primary inline-block">
-            Voir le CV complet
-          </Link>
+//           <Link to="/fr/portfolio" className="btn-primary inline-block">
+//             Voir le CV complet
+//           </Link>
 
-        </motion.div>
-      </div>
+//         </motion.div>
+//       </div>
 
-      <ContactSection />
-    </section>
-  );
-};
+//       <ContactSection />
+//     </section>
+//   );
+// };
 const About_LandingFR = () => {
   return (
     <section className="section-padding bg-white text-brand-dark overflow-hidden transition-colors duration-300">
@@ -2397,7 +2397,7 @@ export default function App() {
               <Route path="/" element={<Home />} />
               <Route path="/portfolio" element={<Portfolio />} />
               <Route path="/contact" element={<ContactSection />} />
-              <Route path="/About_Erp" element={<About_Erp />} />
+              {/* <Route path="/About_Erp" element={<About_Erp />} /> */}
               <Route path="/About_Landing" element={<About_Landing />} />
               <Route path="/About_Portfolio" element={<About_Portfolio />} />
 
@@ -2405,7 +2405,7 @@ export default function App() {
               <Route path="/fr" element={<HomeFR />} />
               <Route path="/fr/portfolio" element={<PortfolioFR />} />
               <Route path="/fr/contact" element={<ContactSectionFR />} />
-              <Route path="/fr/About_Erp" element={<About_ErpFR />} />
+              {/* <Route path="/fr/About_Erp" element={<About_ErpFR />} /> */}
               <Route path="/fr/About_Landing" element={<About_LandingFR />} />
               <Route path="/fr/About_Portfolio" element={<About_PortfolioFR />} />
 
