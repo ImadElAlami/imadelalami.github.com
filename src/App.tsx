@@ -314,7 +314,8 @@ const Home = () => {
             <h2 className="text-4xl font-bold text-brand-dark mb-4">Services & Featured Work</h2>
             <div className="w-20 h-1.5 bg-brand-blue mx-auto rounded-full" />
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8"> */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
                 // { title: 'Enterprise Resource Planning (ERP)', desc: 'Easy to manage websites made to have a smooth experience with your Enterprise.', desc2:'10+ pages', pic: '/ERP.png', example: '/About_Erp'},
                 { title: 'Landing Pages', desc: 'High-converting landing pages for marketing campaigns.', desc2:'2-5 pages', pic: '/Landing_page.png', example: '/About_Landing'},
@@ -1372,7 +1373,8 @@ const HomeFR = () => {
             <div className="w-20 h-1.5 bg-brand-blue mx-auto rounded-full" />
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          {/* <div className="grid grid-cols-1 md:grid-cols-3 gap-8"> */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {[
               // {
               //   title: "ERP (Gestion d’entreprise)",
